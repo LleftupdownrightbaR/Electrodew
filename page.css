@@ -7,29 +7,47 @@ body {
   opacity: 0;
 }
 .window {
-  background-color: rgba(200, 200, 200, 0.6);
+  background-color: rgba(200, 200, 200, 0);
   box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-column-gap: 0px;
   grid-auto-flow: column;
-  position: absolute;
+  position: fixed;
 }
 .windowIn {
   position: relative;
-  margin: 0px;
+  margin: 8px;
+  margin-top: 0px;
+}
+.windowBg {
+  -webkit-backdrop-filter: blur(32px) contrast(150%);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 7px;
+  filter: saturate(2);
+  z-index: 0;
+  position: absolute;
+  padding: 0px;
+  width: 99.2%; height: 99.4%;
+}
+#backgrounda {
+  border: 0px solid rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  opacity: .5;
+  width: 100%; height: 100%;
 }
 #titlebarIn {
-  color: rgba(255, 255, 255, 1);
-  background: linear-gradient(to right, rgba(33, 33, 187, 0.6), rgba(55, 77, 230, 0.6), rgba(33, 85, 230, 0.6), rgba(87, 180, 250, 0.6));
+  color: rgba(0, 0, 0, 1);
+  /*background: linear-gradient(to right, rgba(33, 33, 187, 0.6), rgba(55, 77, 230, 0.6), rgba(33, 85, 230, 0.6), rgba(87, 180, 250, 0.6));*/
   /*background-color: rgba(200, 200, 200, 1)*/
   display: grid;
-  grid-template-columns: 25px auto 25px 25px 25px;
+  grid-template-columns: 25px auto 32px 32px 50px;
   grid-template-rows: 25px;
   grid-column-gap: 0px;
   grid-auto-flow: column;
-  padding: 2px;
+  padding: 0px;
   width: auto;
 }
 .buttonLink,.tabLink {
@@ -67,12 +85,13 @@ body {
 }
 .button, .toolbar {
   background-color: rgba(200, 200, 200, 0.6);
-  -webkit-backdrop-filter: blur(32px) contrast(150%);
+  /*-webkit-backdrop-filter: blur(32px) contrast(150%);*/
   width: auto;  height: ;
 /*  position: flex;*/
 }
 .toolbar {
   transform: translate(0, 0px);
+  height: auto;
 }
 .tabLink {
   background-color: rgba(200, 200, 200, 1);
@@ -106,12 +125,12 @@ body {
   height: 98px;
 }
 .window, .buttonLink, .tabLink, .tabContext {
-  border: 1px outset rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
   border-right: 1px outset rgba(0, 0, 0, 1);
   border-bottom: 1px outset rgba(0, 0, 0, 1);
 }
 .windowIn, .button, .tab, .tabContextIn {
-  border: 1px outset rgba(255, 255, 255, 1);
+  border: 0px outset rgba(255, 255, 255, 1);
   border-left: 1px outset rgba(137, 137, 137, 1);
   border-top: 1px outset rgba(137, 137, 137, 1);
   width: auto;  height: ;
@@ -149,10 +168,79 @@ body {
   text-align: center;
 }
 #buttonH00, #buttonH01, #buttonH02, #buttonH03 {
+  color: white;
   font-size: 14px;
+  font-weight: heavy;
+  -webkit-text-stroke: .5px darkgray;
+}
+#button01, #button02 {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  border: 1px solid rgba(137, 137, 137, 1);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-auto-flow: column;
+}
+#button03 {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  border: 1px solid rgba(137, 137, 137, 1);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-auto-flow: column;
+}
+.windowButtonLight {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 87%;
+  grid-column-gap: 0px;
+  grid-auto-flow: column;
+  opacity: .7;
+  z-index: ;
+  position: absolute;
+  width: 100%; height: 100%;
+}
+.windowButtonLightIn2 {
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  position: relative;
+  width: 30px; height: 8.5px;
+}
+.windowButtonLightIn {
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  position: relative;
+  width: 30px; height: 12.5px;
+}
+.windowButtonLightIn6 {
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  position: relative;
+  width: 47px; height: 8.5px;
+}
+.windowButtonLightIn5 {
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  position: relative;
+  width: 47px; height: 12.5px;
+}
+#buttonLink– {
+  background-color: rgba(163, 208, 255, 0);
+  border-right: 0px solid rgba(0, 0, 0, 1);
+  margin-right: -1px;
+  position: relative;
+}
+#buttonLink□ {
+  background-color: rgba(163, 208, 255, 0);
+  border-left: 0px solid rgba(0, 0, 0, 1);
+  border-right: 0px solid rgba(0, 0, 0, 1);
+  margin-right: -1px;
+  position: relative;
 }
 #buttonLink× {
-  margin-left: 1px;
+  background-color: rgba(200, 87, 87, 0.8);
+  border-left: 0px solid rgba(0, 0, 0, 1);
+  color: gray;
+  margin-left: 0px;
+  position: relative;
 }
 #buttonH00 {
   background: url(images/jumpingByCly.svg);
@@ -160,14 +248,15 @@ body {
   text-decoration: none;
 }
 #titlebar {
-  background-color: rgba(200, 200, 200, 0.6);
-  -webkit-backdrop-filter: blur(32px) contrast(150%);
+  background-color: rgba(200, 200, 200, 0);
+  /*-webkit-backdrop-filter: blur(32px) contrast(150%);*/
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-column-gap: 2px;
   grid-auto-flow: column;
-  padding: 1px;
+  padding: 0px;
+  margin-top: -2px;  margin-bottom: 8px;
 }
 .divhr {
   border: 1px outset rgba(255, 255, 255, 1);
@@ -175,7 +264,7 @@ body {
 .pagebox {
   background-color: rgba(0, 0, 0, 0);
   border: 1px inset rgba(255, 255, 255, 1);
-  -webkit-backdrop-filter: blur(32px) contrast(150%);
+  /*-webkit-backdrop-filter: blur(32px) contrast(150%);*/
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -187,9 +276,6 @@ body {
 }
 .tiles {
   border: 1px inset rgba(137, 137, 137, 1);
-}
-.toolbar {
-  height: auto;
 }
 #navibar {
   display: inline-block;
