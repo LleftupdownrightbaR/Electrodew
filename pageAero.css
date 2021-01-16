@@ -5,22 +5,28 @@ body {
 }
 .empty {
   opacity: 0;
+  height: 18px;
+}
+.window, .windowIn {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-auto-flow: column;
 }
 .window {
   background-color: rgba(200, 200, 200, 0);
   box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.6);
   border-radius: 8px;
-  display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-column-gap: 0px;
-  grid-auto-flow: column;
   position: fixed;
+  width: 98%; height: 87%;
 }
 .windowIn {
+  grid-template-rows: 33px auto 0px 135px;
   position: relative;
   margin: 8px;
   margin-top: 32px;
+  width: auto; height: auto;
 }
 .windowBg {
   -webkit-backdrop-filter: blur(8px);
@@ -30,7 +36,7 @@ body {
   z-index: 0;
   position: absolute;
   padding: 0px;
-  width: 99.2%; height: 99.4%;
+  width: 99.7%; height: 99.6%;
 }
 #backgrounda {
   border: 0px solid rgba(255, 255, 255, 1);
@@ -43,12 +49,16 @@ body {
   /*background: linear-gradient(to right, rgba(33, 33, 187, 0.6), rgba(55, 77, 230, 0.6), rgba(33, 85, 230, 0.6), rgba(87, 180, 250, 0.6));*/
   /*background-color: rgba(200, 200, 200, 1)*/
   display: grid;
-  grid-template-columns: 25px auto 32px 31px 50px;
+  grid-template-columns: 25px auto 32px 32px 50px;
   grid-template-rows: 25px;
   grid-column-gap: 0px;
   grid-auto-flow: column;
   padding: 0px;
   width: auto;
+}
+#buttonLink00, .titleText {
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+  margin-top: 4px;
 }
 .buttonLink,.tabLink {
   color: rgba(0, 0, 0, 0.5);
@@ -91,7 +101,7 @@ body {
 }
 .toolbar {
   transform: translate(0, 0px);
-  margin-top: 0px;
+  margin-top: -33px;
   height: auto;
 }
 .tabLink {
@@ -99,7 +109,6 @@ body {
   border-radius: 8px 8px 0px 0px;
   margin-right: -4px;
   transform: translate(0, 9px);
-  text-decoration: none;
   display: inline-block;
   width: auto;
 }
@@ -176,6 +185,10 @@ body {
   -webkit-text-stroke: .8px black;
   grid-template-rows: 21px;
 }
+#button00 {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
 #button01, #button02 {
   background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
   border: 1px solid rgba(0, 0, 0, 1);
@@ -227,6 +240,9 @@ body {
   position: relative;
   width: 47px; height: 12px;
 }
+#buttonLink00 {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
 #buttonLink– {
   background-color: rgba(163, 208, 255, 0);
   border: 1px solid rgba(255, 255, 255, 1);
@@ -256,6 +272,8 @@ body {
 #buttonH00 {
   background: url(jumpingByCly.svg);
   background-size: auto;
+  border: 1px solid rgba(255, 255, 255, 0);
+  grid-template-rows: 21px;
   text-decoration: none;
 }
 #titlebar {
