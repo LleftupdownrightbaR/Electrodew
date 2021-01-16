@@ -8,51 +8,44 @@ body, div, img {
   padding: 0px;
   margin: 0px;
 }
-body {
-  filter: blur(px);
-}
 #bg, #bgmask3, #bgmask2, #bgmask, #bgl1, #bgl2, #bgl3, #bgl4, #bgl5, #bgl6, #bgl7, #bgl10, #bgb {
   position: absolute;
   overflow: hidden;
 }
-#bgmask3, #bgmask3In2, #bgmask3In, #bgmask2, #bgmask2In2, #bgmask2In {
+#bg, #bgmask3, #bgmask3In2, #bgmask3In, #bgmask2, #bgmask2In2, #bgmask2In, #bgmask, #bgb {
   width: 100%; height: 100%;
 }
-#bgmask3, #bgmask2 {
+#bg, #bgmask3, #bgmask2 {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto 70%;
   grid-column-gap: 0px;
   grid-auto-flow: column;
+}
+#bgmask3, #bgmask2 {
+  grid-template-rows: auto 70%;
 }
 #bgmask3 {
   z-index: 12;
 }
 #bgmask3In2 {
-  background: -webkit-radial-gradient(ellipse, rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(255, 255, 255, .7));
+  background: -webkit-radial-gradient(ellipse, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, .7));
 }
 #bgmask2 {
   z-index: 11;
 }
 #bgmask2In2 {
-  background: linear-gradient(to bottom, rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(255, 255, 255, 1));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 #bgmask {
-  background: linear-gradient(to top right, rgba(255, 255, 255, 0.3), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(255, 255, 255, .85), rgba(177, 216, 255, 0), rgba(255, 255, 255, .85), rgba(255, 255, 255, .85), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(177, 216, 255, 0), rgba(255, 255, 255, .7));
-  -webkit-backdrop-filter: brightness(.6) blur(1px);
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, .1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(255, 255, 255, 0), rgba(255, 255, 255, .85), rgba(255, 255, 255, .85), rgba(255, 255, 255, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(255, 255, 255, 0), rgba(255, 255, 255, .85), rgba(255, 255, 255, .85), rgba(255, 255, 255, .85), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .1), rgba(255, 255, 255, 0), rgba(255, 255, 255, .85), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(255, 255, 255, 0), rgba(255, 255, 255, .85), rgba(255, 255, 255, 0), rgba(0, 0, 0, .1), rgba(255, 255, 255, .7), rgba(255, 255, 255, .85));
+  -webkit-backdrop-filter: brightness(.6);
   opacity: .6;
   width: 100%; height: 100%;
   z-index: 10;
 }
 #bg {
-  display: grid;
-  grid-template-columns: auto;
   grid-template-rows: 100%;
-  grid-column-gap: 0px;
-  grid-auto-flow: column;
-  filter: contrast(1.2);
   max-width: 100%; max-height: 100%;
-  width: 100%; height: 100%;
 }
 #bgl1, #bgl2, #bgl3, #bgl4, #bgl5, #bgl6, #bgl7, #bgl10 {
   opacity: 0.3;
@@ -60,42 +53,34 @@ body {
 }
 #bgl1 {
   animation: aa 20s linear infinite;
-  /*animation-delay: 7s;*/
   z-index: 1;
 }
 #bgl2 {
   animation: aa 16s linear infinite;
-  /*animation-delay: 6s;*/
   z-index: 2;
 }
 #bgl3 {
   animation: aa 12.5s linear infinite;
-  /*animation-delay: 5s;*/
   z-index: 3;
 }
 #bgl4 {
   animation: aa 11s linear infinite;
-  /*animation-delay: 4s;*/
   z-index: 4;
 }
 #bgl5 {
   animation: aa 10s linear infinite;
-  /*animation-delay: 3s;*/
   z-index: 5;
 }
 #bgl6 {
   animation: aa 9s linear infinite;
-  /*animation-delay: 2s;*/
   z-index: 6;
 }
 #bgl7 {
   animation: aa 7.5s linear infinite;
-  /*animation-delay: 1s;*/
   z-index: 7;
 }
 #bgl10 {
   animation: aa 5s linear infinite;
-  /*animation-delay: 500ms;*/
   z-index: 8;
 }
 @keyframes aa {
@@ -109,7 +94,6 @@ body {
 #bgb {
   background: linear-gradient(to bottom, rgba(163, 208, 255, 1), rgba(177, 216, 255, 1), rgba(189, 235, 255, 1));
   z-index: 0;
-  width: 100%; height: 100%;
 }
 
       </style>
@@ -125,14 +109,14 @@ body {
         <div id="bgmask2In"></div>
       </div>
       <div id="bgmask"></div>
-      <img id="bgl1" src="IMG_1024.PNG"></img>
-      <img id="bgl2" src="IMG_1025.PNG"></img>
-      <img id="bgl3" src="IMG_1026.PNG"></img>
-      <img id="bgl4" src="IMG_1027.PNG"></img>
-      <img id="bgl5" src="IMG_1028.PNG"></img>
-      <img id="bgl6" src="IMG_1029.PNG"></img>
-      <img id="bgl7" src="IMG_1031.PNG"></img>
-      <img id="bgl10" src="IMG_1032.PNG"></img>
+      <img id="bgl1" src="export.png"></img>
+      <img id="bgl2" src="export 2.png"></img>
+      <img id="bgl3" src="export 3.png"></img>
+      <img id="bgl4" src="export 4.png"></img>
+      <img id="bgl5" src="export 5.png"></img>
+      <img id="bgl6" src="export 6.png"></img>
+      <img id="bgl7" src="export 7.png"></img>
+      <img id="bgl10" src="export 8.png"></img>
       <div id="bgb"></div>
     </div>
   </body>
