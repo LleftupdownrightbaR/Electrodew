@@ -3,21 +3,28 @@
   <head>
     <meta charset="UTF-8">
       <title>LleftupdownrightbaR</title>
-      <link rel="preload" type="text/css" href="pageAero.css" as="style"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com"> 
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+      <link rel="preload" type="text/css" href="page.css" as="style"/>
       <link rel="stylesheet" type="text/css" href="pageAero.css">  
       <link rel="shortcut icon" href="jumpingByCly.ico"/>
       <link rel="bookmark" href="jumpingByCly.ico"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com"> 
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <script src="page.js"></script>
+    <script src="scripts/page.js"></script>
     <div id="window00" class="window">
       <div class="windowBg">
-        <iframe id="backgrounda" src="backgrounda.html" scrolling="no"></iframe>
+        <div id="backgrounda" scrolling="no">
+          <div id="bgmask3">
+            <div id="bgmask3In2"></div>
+            <div id="bgmask3In"></div>
+          </div>
+          <div id="bgmask"></div>
+          <div id="bgb"></div>
+        </div>
       </div>
       <div class="windowIn">
-        <div id="titlebar" onselectstart=”return false” oncontextmenu=”return false”>
+        <div id="titlebar">
           <div id="titlebarIn">
             <a id="buttonLink00" class="buttonLink" href="https://czbluesky.webnode.tw/_files/200000015-65a9e66a43/三角們%20with%20CzBlueSKY.png" target="_parent" title="按鈕">
               <div id="button00" class="button">
@@ -29,64 +36,340 @@
               <div id="button01" class="button">
                 <div class="windowButtonLight">
                   <div class="windowButtonLightIn2"></div>
-                  <div class="windowButtonLightIn"></div>
+                  <div id="wBLIL" class="windowButtonLightIn"></div>
                 </div>
-                <div id="buttonH01" class="buttonH">–</div>
+                <div id="buttonH01" class="buttonH">
+                  <div id="wBT01" class=windowButtonText>_</div>
+                </div>
               </div>
             </a>
-            <a id="buttonLink□" class="buttonLink" href="javascript:howdao(da);return false;" target="#" title="按鈕">
+            <a id="buttonLink□" class="buttonLink" onclick="javascript:geonda();" href="#" target="_parent" title="按鈕">
               <div id="button02" class="button">
                 <div class="windowButtonLight">
                   <div class="windowButtonLightIn2"></div>
                   <div class="windowButtonLightIn"></div>
                 </div>
-                <div id="buttonH02" class="buttonH">□</div>
+                <div id="buttonH02" class="buttonH">
+                  <div id="wBT02" class=windowButtonText>ロ</div>
+                </div>
               </div>
             </a>
             <a id="buttonLink×" class="buttonLink" href="" target="_parent" title="按鈕">
               <div id="button03" class="button">
                 <div class="windowButtonLight">
-                  <div class="windowButtonLightIn6"></div>
-                  <div class="windowButtonLightIn5"></div>
+                  <div class="windowButtonLightIn2"></div>
+                  <div id="wBLIR" class="windowButtonLightIn"></div>
                 </div>
-                <div id="buttonH03" class="buttonH">×</div>
+                <div id="buttonH03" class="buttonH">
+                  <div id="wBT03" class=windowButtonText>x</div>
+                </div>
               </div>
             </a>
           </div>
         </div>
-        <div class="toolbar">
-          <div class="tabbar">
-            <a id="tabLink00" class="tabLink" href="https://czbluesky.webnode.tw/_files/200000015-65a9e66a43/三角們%20with%20CzBlueSKY.png" target="_parent" title="頁籤00">
-              <div id="tab00" class="tab">
-                <div class="empty">0</div>
-                <div id="tabH00" class="tabH">頁籤00</div>
+        <div class="windowContent">
+          <div class="windowContentIn">
+            <div class="tabView">
+              <input type="radio" name="check" id="tabRadio00" class="tabRadio" checked>
+              <label id="tabLink00" class="tabLink" for="tabRadio00">
+                <div id="tab00" class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div id="tabH00" class="tabH">頁籤00</div>
+                </div>
+              </label>
+              <div id="tabCI00" class="tabContent">
+                <div class="tabContentIn">
+                  <div class="content">
+                    <h1>0</h1>
+                    <h2>0</h2>
+                    <h3>0</h3>
+                    <h4>0</h4>
+                    <h5>0</h5>
+                    <h6>0</h6>
+                    <p>蛤？</p>
+                    <a class="Link" href="https://github.com/LleftupdownrightbaR/Electrodew" target="_parent" title="https://github.com/LleftupdownrightbaR/Electrodew">GitHub Repository</a>
+                  </div>
+                </div>
               </div>
-            </a>
-            <a class="tabLink" href="https://czbluesky.webnode.tw/_files/200000015-65a9e66a43/三角們%20with%20CzBlueSKY.png" target="_parent" title="頁籤01">
-              <div class="tab">
-                <div class="tabH">頁籤01</div>
+              <input type="radio" name="check" id="tabRadio01" class="tabRadio">
+              <label class="tabLink" for="tabRadio01">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤01</div>
+                </div>
+              </label>
+              <div id="tabC01" class="tabContent">
+                <div class="tabContentIn">
+                  <div class="content">
+                    <h1>0</h1>
+                    <h2>0</h2>
+                    <h3>0</h3>
+                    <h4>0</h4>
+                    <h5>0</h5>
+                    <h6>0</h6>
+                    <a class="Link" href="https://github.com/LleftupdownrightbaR/Electrodew" target="_parent" title="https://github.com/LleftupdownrightbaR/Electrodew">What?</a>
+                  </div>
+                </div>
               </div>
-            </a>
-            <a class="tabLink" href="https://czbluesky.webnode.tw/_files/200000015-65a9e66a43/三角們%20with%20CzBlueSKY.png" target="_parent" title="頁籤02">
-              <div class="tab">
-                <div class="tabH">頁籤02</div>
-              </div>
-            </a>
-          </div>
-          <div class="tabContext">
-            <div class="tabContextIn">0<a href="https://github.com/LleftupdownrightbaR/Electrodew" target="_parent" title="https://github.com/LleftupdownrightbaR/Electrodew">github</a></div>
-          </div>
-          <div class="empty">0</div>
-        </div>
-        <div class="divhr"></div>
-        <div class="pagebox">
-          <div class="tiles">
-            <img class="jumpingByClysvg" src="jumpingByCly.svg" alt=""></img>
-            <div class="title">
-            標題
+              <input type="radio" name="check" id="tabRadio02" class="tabRadio">
+              <label class="tabLink" for="tabRadio02">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤02</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio03" class="tabRadio">
+              <label class="tabLink" for="tabRadio03">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤03</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio04" class="tabRadio">
+              <label class="tabLink" for="tabRadio04">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤04</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio05" class="tabRadio">
+              <label class="tabLink" for="tabRadio05">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤05</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio06" class="tabRadio">
+              <label class="tabLink" for="tabRadio06">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤06</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio07" class="tabRadio">
+              <label class="tabLink" for="tabRadio07">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤07</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio08" class="tabRadio">
+              <label class="tabLink" for="tabRadio08">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤08</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio09" class="tabRadio">
+              <label class="tabLink" for="tabRadio09">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤09</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio10" class="tabRadio">
+              <label class="tabLink" for="tabRadio10">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤10</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio11" class="tabRadio">
+              <label class="tabLink" for="tabRadio11">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤11</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio12" class="tabRadio">
+              <label class="tabLink" for="tabRadio12">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤12</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio13" class="tabRadio">
+              <label class="tabLink" for="tabRadio13">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤13</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio14" class="tabRadio">
+              <label class="tabLink" for="tabRadio14">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤14</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio15" class="tabRadio">
+              <label class="tabLink" for="tabRadio15">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤15</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio16" class="tabRadio">
+              <label class="tabLink" for="tabRadio16">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤16</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio17" class="tabRadio">
+              <label class="tabLink" for="tabRadio17">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤17</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio18" class="tabRadio">
+              <label class="tabLink" for="tabRadio18">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤18</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio19" class="tabRadio">
+              <label class="tabLink" for="tabRadio19">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤19</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio20" class="tabRadio">
+              <label class="tabLink" for="tabRadio20">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤20</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio21" class="tabRadio">
+              <label class="tabLink" for="tabRadio21">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤21</div>
+                </div>
+              </label>
+              <input type="radio" name="check" id="tabRadio22" class="tabRadio">
+              <label class="tabLink" for="tabRadio22">
+                <div class="tab">
+                  <div class="windowButtonLight">
+                    <div class="windowButtonLightIn2"></div>
+                    <div class="windowButtonLightIn"></div>
+                  </div>
+                  <div class="tabH">頁籤22</div>
+                </div>
+              </label>
             </div>
-            <div class="context">
-            內容
+            <div class="tabViewSpace"></div>
+            <div class="buttonbar">
+              <div class="buttonblock">
+                <a id="buttonLinkA" class="buttonLink" href="index.html" target="_parent" title="按鈕">
+                  <div id="buttonA" class="button">
+                    <div class="windowButtonLight">
+                      <div class="windowButtonLightIn2"></div>
+                      <div class="windowButtonLightIn"></div>
+                    </div>
+                    <div id="buttonHA" class="buttonH">
+                      <div class=buttonText>
+                      This is a button da!
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a id="buttonLinkB" class="buttonLink" href="indexi.html" target="_parent" title="按鈕">
+                  <div id="buttonB" class="button">
+                    <div class="windowButtonLight">
+                      <div class="windowButtonLightIn2"></div>
+                      <div class="windowButtonLightIn"></div>
+                    </div>
+                    <div id="buttonHB" class="buttonH" autofocus>
+                      <div class=buttonText>
+                      This is a button da!🤔
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="divhr"></div>
+          <div class="pagebox">
+            <div class="tiles">
+              <img class="jumpingByClysvg" src="jumpingByCly.svg" alt=""></img>
+              <div class="title">
+              標題
+              </div>
+              <div class="context">
+              內容
+              </div>
             </div>
           </div>
         </div>
@@ -97,23 +380,6 @@
     GG<br>
     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;GG<br>
     </marquee>
-    </div>
-    <div id="navibar">
-      <div id="point">
-        <ul>
-          <li><progress max="100" value="87"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-          <li><progress max="100" value="100"></progress></li>
-        </ul>
-        <ul>
-          <li><progress id="totalpoint" max="800" value="787"></progress></li>
-        </ul>
-      </div>
     </div>
   </body>
 </html>
