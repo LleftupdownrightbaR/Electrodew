@@ -488,7 +488,7 @@ body {
   border-radius: 0px 0px 5px 0px;
 }
 #buttonH00 {
-  background: url(images/jumpingByCly.svg);
+  background: url(jumpingByCly.svg);
   background-size: auto;
   background-repeat: no-repeat;
   border: 0px solid rgba(255, 255, 255, 0);
