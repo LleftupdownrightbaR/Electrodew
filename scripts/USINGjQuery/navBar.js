@@ -1,17 +1,33 @@
 $(window).scroll(function(){
+  var scrollVal = $(this).scrollTop();
+  if (scrollVal < 20) {
+    $("#Electrodew").animate({
+      backgroundSize:'2.73rem',
+      fontSize:'2.27rem',
+      lineHeight:'2.73rem'
+      width:'2.73rem',  height:'2.73rem'
+    });
+    $("#searchBox").animate({
+      fontSize:'2.27rem',
+      lineHeight:'2.73rem'
+    });
+    $("#naviBarIn").animate({
+      gridTemplateRows:'5rem'
+    });
+  };
   var before = $(window).scrollTop();
   $(window).scroll(function() {
     var after = $(window).scrollTop();
-    if (before<after) {
+    if (before < after) {
       $("#naviBar").animate({
-        margin-top:'-2.2rem',
-        box-shadow:'8px 8px 50px rgba(0, 0, 0, 0.6)'
+        marginTop:'-3rem',
       });
       before = after;
     };
-    if (before>after) {
+    if (before > after) {
       $("#naviBar").animate({
-        margin-top:'0rem'
+        marginTop:'0rem'
+        boxShadow:'8px 8px 50px rgba(0, 0, 0, 0.6)'
       });
       before = after;
     };
