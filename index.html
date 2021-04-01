@@ -12,6 +12,7 @@
       }
       body {
         background-color: var(--lightColor);
+        color: var(--fontColor);
         width: 100%;  height: 100%;
       }
       .gridEle {
@@ -26,7 +27,7 @@
         width: 7rem;  height: 2.2rem;
       }
       .scrollBox {
-        overflow-y: auto;
+        /*overflow-y: auto;*/
         width: 100%;  height: auto;
       }
       .Lǎnchē {
@@ -37,7 +38,7 @@
         grid-row-gap: 0rem;
       }
       #naviBar {
-        -webkit-backdrop-filter: blur(1.6rem);
+        -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
         position: fixed;
         padding-top: 0.4rem;  padding-bottom: 0.4rem;
         width: 100%;  height: auto;
@@ -51,8 +52,9 @@
         padding: .5rem;
       }
       #b2 {
-        background-color: rgba(255, 255, 255, .5);
-        border: .01px solid rgba(255, 255, 255, .01);
+        background-color: rgba(0, 0, 0, .15);
+        border: .01px solid rgba(255, 255, 255, .1);
+        filter: brightness(1.2);
         overflow: hidden;
         overflow-x: auto;
       }
@@ -89,6 +91,7 @@
         :root {
            --lightColor: rgba(35, 35, 35, .87);
            --contentColor: rgba(0, 0, 0, 1);
+           --fontColor: rgba(235, 235, 235, .87);
            --glassOpacity: .7;
         }
       }
@@ -96,6 +99,7 @@
         :root {
            --lightColor: rgba(235, 235, 235, .87);
            --contentColor: rgba(255, 255, 255, 1);
+           --fontColor: rgba(35, 35, 35, .87);
            --glassOpacity: .7;
         }
       }

@@ -4,21 +4,16 @@ $(window).scroll(function(){
   $(window).scroll(function() {
     var after = $(window).scrollTop();
     if (before < after) {
-      $("#naviBar").animate({
-        marginTop:'-3rem',
-      });
+      $("#naviBar").slideDown(normal);
       before = after;
     };
     if (before > after) {
-      $("#naviBar").animate({
-        marginTop:'0rem'
-        boxShadow:'8px 8px 50px rgba(0, 0, 0, 0.6)'
-      });
+      $("#naviBar").slideUp(normal);
       before = after;
     };
   });
 });
-$(window).load(function(){
+$(window).ready(function(){
   if (scrollVal < 20) {
     $("#Electrodew").animate({
       backgroundSize:'2.73rem',
