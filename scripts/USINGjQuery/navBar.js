@@ -18,19 +18,20 @@ $(window).scroll(function(){
     };
   });
 });
-
-if (scrollVal < 20) {
-  $("#Electrodew").animate({
-    backgroundSize:'2.73rem',
-    fontSize:'2.27rem',
-    lineHeight:'2.73rem'
-    width:'2.73rem',  height:'2.73rem'
-  });
-  $("#searchBox").animate({
-    fontSize:'2.27rem',
-    lineHeight:'2.73rem'
-  });
-  $("#naviBarIn").animate({
-    gridTemplateRows:'5rem'
-  });
-};
+$(window).load(function(){
+  if (scrollVal < 20) {
+    $("#Electrodew").animate({
+      backgroundSize:'2.73rem',
+      fontSize:'2.27rem',
+      lineHeight:'2.73rem'
+      width:'2.73rem',  height:'2.73rem'
+    });
+    $("#searchBox").animate({
+      fontSize:'2.27rem',
+      lineHeight:'2.73rem'
+    });
+    $("#naviBarIn").animate({
+      gridTemplateRows:'5rem'
+    });
+  };
+});
