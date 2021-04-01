@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+      <title>mediaTest</title>
+      <style>
+      * {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: var(--lightColor);
+        width: 100%;  height: 100%;
+      }
+      .gridEle {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        grid-auto-flow: column;
+      }
+      .scrollX {
+        width: 7rem;  height: 2.2rem;
+      }
+      .scrollBox {
+        overflow-y: auto;
+        width: 100%;  height: auto;
+      }
+      .Lǎnchē {
+        padding-left: 5rem;  padding-right: 5rem;
+      }
+      #container {
+        grid-template-rows: 3rem auto;
+        grid-row-gap: 0rem;
+      }
+      #naviBar {
+        -webkit-backdrop-filter: blur(1.6rem);
+        position: fixed;
+        padding-top: 0.4rem;  padding-bottom: 0.4rem;
+        width: 100%;  height: auto;
+      }
+      #naviBarIn {
+        grid-template-columns: auto 6.99rem auto;
+        grid-template-rows: 2.2rem;
+      }
+      #b1, #b2, #b3 {
+        border-radius: .5rem;
+        padding: .5rem;
+      }
+      #b2 {
+        background-color: rgba(255, 255, 255, .5);
+        overflow: hidden;
+        overflow-x: auto;
+      }
+      #Electrodew, #searchBox {
+        float: left;
+        line-height: 1.2rem;
+      }
+      #Electrodew {
+        background: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew512.png) 0 / cover fixed;
+        border-radius: .5rem;
+        width: 2.2rem;  height: 2.2rem;
+      }
+      #content {
+        border: 1px solid rgba(255, 255, 255, .5);
+        grid-template-columns: auto;
+      }
+      @media screen and (orientation: portrait) {
+        .Lǎnchē {
+          padding-left: 2.2rem;  padding-right: 2.2rem;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-device-width: 768px) {
+        .Lǎnchē {
+          padding-left: 2.2rem;  padding-right: 2.2rem;
+        }
+      }
+      @media screen and (max-device-width: 480px) {
+        * {
+          font-size: 56px;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+           --lightColor: rgba(35, 35, 35, .87);
+           --contentColor: rgba(0, 0, 0, 1);
+           --glassOpacity: .7;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+           --lightColor: rgba(235, 235, 235, .87);
+           --contentColor: rgba(255, 255, 255, 1);
+           --glassOpacity: .7;
+        }
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+      </style>
+      <link rel="shortcut icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/electrodewX-ICON.ico" />
+      <link rel="manifest" href="%PUBLIC_URL%/images/icons/manifest.json" />
+      <link rel="apple-touch-icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png" />
+    <meta name="theme-color" content="#58acff" />
+    <meta name="author" content="LleftupdownrightbaR">
+    <meta name="description" content="Electrodew website with some picture and html element.">
+    <meta name="keywords" content="Electrodew, LleftupdownrightbaR">
+    <meta name="language" content="zh-Hant-TW">
+    <meta name="distribution" content="global">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Electrodew" />
+    <meta name="twitter:creator" content="@LleftupdownrightbaR" />
+    <meta property="og:url" content="https://lleftupdownrightbar.github.io/Electrodew/" />
+    <meta property="og:title" content="Electrodew" />
+    <meta property="og:description" content="Electrodew website with some picture and some html element." />
+    <meta property="og:image" content="https://lleftupdownrightbar.github.io/Electrodew/images/banners/banner2021331.png" />
+  </head>
+  <body>
+    <div id="container" class="gridEle">
+      <nav id="naviBar" class="gridEle">
+        <div id="naviBarIn" class="gridEle">
+          <div id="b1"></div>
+          <div id="b2">
+            <div class="scrollX">
+              <div id="Electrodew"></div>
+              <div id="searchBox">
+                <p>｜Search</p>
+              </div>
+            </div>
+          </div>
+          <div id="b3"></div>
+        </div>
+      </nav>
+      <div id="topGrid" class="gridEle"></div>
+      <div id="content">
+        <div id="contentIn" class="scrollBox">
+          <div class="Lǎnchē">
+            <div id="contentIn" class="scrollBox">
+            </div>
+          </div>
+          <detail class="Lǎnchē">
+            2021 Mar 31
+          </detail>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <script src="https://lleftupdownrightbar.github.io/Electrodew/scripts/USINGjQuery/navBar.js"></script>
+  </body>
+</html>

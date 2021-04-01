@@ -1,0 +1,30 @@
+{
+  "short_name": "Electrodew",
+  "name": "Electrodew Work",
+  "icons": [
+    {
+      "src": "electrodewX-ICON.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "Electrodew192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Electrodew512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "Electrodew7680.png",
+      "type": "image/png",
+      "sizes": "7680x7680"
+    }	    
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#58acff",
+  "background_color": "#fafafa"
+}
