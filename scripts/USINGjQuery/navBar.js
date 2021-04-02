@@ -14,7 +14,7 @@ $(window).scroll(function(){
   });
 });
 $(window).ready(function(){
-  if (scrollVal < 20) {
+  if (scrollVal < 85) {
     $("#Electrodew").animate({
       backgroundSize:'2.73rem',
       fontSize:'2.27rem',
