@@ -2,6 +2,7 @@
 <html lang="zh-Hant-TW" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>mediaTest</title>
       <style>
       * {
@@ -10,8 +11,11 @@
         margin: 0;
         padding: 0;
       }
-      body {
+      body, #footerA, #naviBar {
         background-color: var(--lightColor);
+        -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
+      }
+      body {
         color: var(--fontColor);
         width: 100%;  height: 100%;
       }
@@ -23,54 +27,107 @@
         grid-row-gap: 0;
         grid-auto-flow: column;
       }
+      .scrollX, .scrollY {
+        -webkit-overflow-scrolling: touch;
+        /*white-space: nowrap;*/
+        position: relative;
+      }
       .scrollX {
-        width: 7rem;  height: 2.2rem;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .scrollY {
+        scroll-snap-type: y mandatory;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .scrollXChild, Lǎnchē {
+        float: left;
+        scroll-snap-align: center;
       }
       .scrollBox {
-        /*overflow-y: auto;*/
+        overflow-y: auto;
         width: 100%;  height: auto;
       }
       .Lǎnchē {
         padding-left: 5rem;  padding-right: 5rem;
       }
       #container {
-        grid-template-rows: 3.5rem auto;
+        grid-template-rows: 3.5rem auto 3.5rem 44px;
         grid-row-gap: 0rem;
+        width: 100%;  height: 100%;
       }
       #naviBar {
-        -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
-        position: fixed;
+        grid-template-columns: auto 7rem 1rem auto;
+        grid-template-rows: 2.2rem;
+        /*filter: brightness(1.2);*/
         padding-top: 0.4rem;  padding-bottom: 0.4rem;
+        position: fixed;
         width: 100%;  height: auto;
       }
-      #naviBarIn {
-        grid-template-columns: auto 6.5rem auto;
-        grid-template-rows: 2.2rem;
-      }
-      #b1, #b2, #b3 {
-        border-radius: .5rem;
-        padding: .5rem;
-      }
-      #b2 {
+      #b1 {
         background-color: rgba(0, 0, 0, .15);
         border: .01px solid rgba(255, 255, 255, .1);
-        filter: brightness(1.2);
+        border-radius: .5rem;
+        grid-template-columns: 2.2rem auto;
+        grid-template-rows: 2.2rem;
         overflow: hidden;
-        overflow-x: auto;
+        transition: .15s ease-in-out;
+        width: 6.5rem;  height: 2.2rem; 
       }
-      #Electrodew, #searchBox {
-        float: left;
-        line-height: 1.2rem;
+      #b2 {
+        color: var(--fontColor);
+        text-decoration: none;
+      }
+      #container,#Electrodew, #searchBox {
+        position: relative;
       }
       #Electrodew {
-        background: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew512.png);
-        background-size: 1.2rem;
+        background: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png);
+        background-size: 2.2rem;
         background-repeat: no-repeat;
         border-radius: .5rem;
-        width: 1.2rem;  height: 1.2rem;
+        width: 2.2rem;  height: 2.2rem;
+      }
+      #searchCheckBox, #searchBoxIn {
+        display: inline-block;
+        position: fixed;
+      }
+      #searchBoxIn {
+        opacity: .9;
+        left: 0;  top: 3rem;
+        width: auto;  height: auto;
       }
       #content {
         grid-template-columns: auto;
+      }
+      #contentIn {
+
+      }
+      #footerA {
+        position: fixed;
+        top: calc(100% - 44px) ;
+        margin-top: -3rem;
+        width: 100%;  height: 3rem;
+      }
+      #b1:hover {
+        background-color: var(--highlightColor);
+      }
+      #b2:hover {
+        opacity: .7;
+      }
+      #b2, #searchP, #XP {
+        line-height: 2.2rem;
+      }
+      #searchCheckBox:checked+#searchP+#XP+#searchBoxIn, #searchCheckBox, #searchCheckBox:checked+#searchP+#XP {
+        display: none;
+      }
+      #searchCheckBox:checked+#searchP, #XP {
+        display: inline-block;
+      }
+      #searchP {
+        display: none;
       }
       @media screen and (orientation: portrait) {
         .Lǎnchē {
@@ -90,6 +147,7 @@
       @media (prefers-color-scheme: dark) {
         :root {
            --lightColor: rgba(35, 35, 35, .87);
+           --highlightColor: rgba(255, 255, 255, .15);
            --contentColor: rgba(0, 0, 0, 1);
            --fontColor: rgba(235, 235, 235, .87);
            --glassOpacity: .7;
@@ -98,6 +156,7 @@
       @media (prefers-color-scheme: light) {
         :root {
            --lightColor: rgba(235, 235, 235, .87);
+           --highlightColor: rgba(0, 0, 0, .25);
            --contentColor: rgba(255, 255, 255, 1);
            --fontColor: rgba(35, 35, 35, .87);
            --glassOpacity: .7;
@@ -114,6 +173,7 @@
     <meta name="keywords" content="Electrodew, LleftupdownrightbaR">
     <meta name="language" content="zh-Hant-TW">
     <meta name="distribution" content="global">
+    <meta name="google-site-verification" content="xsisT6i3O-KlKAwbXZna01ZzjHKTA5XAvA5zmj01xdE" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@Electrodew" />
     <meta name="twitter:creator" content="@LleftupdownrightbaR" />
@@ -125,24 +185,28 @@
   <body>
     <div id="container" class="gridEle">
       <nav id="naviBar" class="gridEle">
-        <div id="naviBarIn" class="gridEle">
-          <div id="b1"></div>
-          <div id="b2">
-            <div class="scrollX">
-              <div id="Electrodew"></div>
-              <div id="searchBox">
-                <p>｜Search</p>
-              </div>
+        <div id="b0"></div>
+        <div id="b1" class="gridEle">
+          <div id="Electrodew"></div>
+          <label id="searchBox" for="searchCheckBox">
+            <input type="checkbox" id="searchCheckBox" value="aSearchCheckBox" checked="checked">
+            <p id="searchP">&ensp;Search</p>
+            <p id="XP">&ensp;X</p>
+            <div id="searchBoxIn">
+               <div class="gcse-search"></div>
             </div>
-          </div>
-          <div id="b3"></div>
+          </label>
         </div>
+        <a id="b2" href="#" target="_parent" title="restToTop">
+          ↑
+        </a>
+        <div id="b3"></div>
       </nav>
       <div id="topGrid" class="gridEle"></div>
-      <div id="content">
-        <div id="contentIn" class="scrollBox">
+      <div id="content" class="scrollBox">
+        <div id="contentIn">
           <div class="Lǎnchē">
-            <div id="contentIn" class="scrollBox">
+            <div id="contentInA">
             </div>
           </div>
           <detail class="Lǎnchē">
@@ -164,12 +228,16 @@
             測
           </div>
           <div class="Lǎnchē">
-            測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測
+            測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測測
           </div>
         </div>
       </div>
+      <footer id="footerA" class="gridEle">
+        <div id="A">A</div>
+      </footer>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
     <script src="https://lleftupdownrightbar.github.io/Electrodew/scripts/USINGjQuery/navBar.js"></script>
+    <script async src="https://cse.google.com/cse.js?cx=82989bf38800ddd54"></script>
   </body>
 </html>
