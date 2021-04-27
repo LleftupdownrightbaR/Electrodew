@@ -4,184 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>mediaTest</title>
-      <style>
-      * {
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 20px;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: var(--lightColor);
-        color: var(--fontColor);
-        width: 100%;  height: 100%;
-      }
-      a {
-        color: var(--aFontColor);
-        text-decoration: none;
-      }
-      .gridEle {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-column-gap: 0;
-        grid-row-gap: 0;
-        grid-auto-flow: column;
-      }
-      .scrollX, .scrollY {
-        -webkit-overflow-scrolling: touch;
-        /*white-space: nowrap;*/
-        position: relative;
-      }
-      .scrollX {
-        scroll-snap-type: x mandatory;
-        overflow-x: auto;
-        overflow-y: hidden;
-      }
-      .scrollY {
-        scroll-snap-type: y mandatory;
-        overflow-x: hidden;
-        overflow-y: auto;
-      }
-      .scrollXChild, Lǎnchē {
-        float: left;
-        scroll-snap-align: center;
-      }
-      .Lǎnchē {
-        /*padding-left: 5rem;  padding-right: 5rem;*/
-      }
-      #container {
-        grid-template-rows: 3.5rem auto 3.5rem;
-        grid-row-gap: 0rem;
-        width: 100%;  height: 100%;
-      }
-      #naviBar {
-        grid-template-columns: auto 7rem 1rem auto;
-        grid-template-rows: 2.2rem;
-        /*filter: brightness(1.2);*/
-        padding-top: 0.4rem;  padding-bottom: 0.4rem;
-        position: fixed;
-        width: 100%;  height: auto;
-      }
-      #b1, #b2 {
-        transition: .15s ease-in-out;
-      }
-      #b1 {
-        background-color: rgba(0, 0, 0, .15);
-        border: .01px solid rgba(255, 255, 255, .1);
-        border-radius: .5rem;
-        grid-template-columns: 2.2rem auto;
-        grid-template-rows: 2.2rem;
-        overflow: hidden;
-        width: 6.5rem;  height: 2.2rem; 
-      }
-      #b2 {
-        color: var(--fontColor);
-        white-space: nowrap;
-      }
-      #container,#Electrodew, #searchBox {
-        position: relative;
-      }
-      #Electrodew {
-        background: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png);
-        background-size: 1.5rem;
-        background-repeat: no-repeat;
-        border-radius: .5rem;
-        margin: .35rem;
-        width: 1.5rem;  height: 1.5rem;
-      }
-      #searchCheckBox, #searchBoxIn {
-        display: inline-block;
-        position: fixed;
-      }
-      #searchBoxIn {
-        opacity: .9;
-        overflow-y: auto;
-        left: 0;  top: 3rem;
-        width: auto;  max-height: 16rem;
-      }
-      #content {
-        grid-template-columns: auto 90% auto;
-      }
-      #contentIn {
-        max-width: 48rem;
-      }
-      #footerA:after, #naviBar:after {
-        background-color: var(--lightColorLite);
-        content: '';
-        -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
-        position: absolute;
-        z-index: -1;
-        width: 100%;  height: 3rem;
-      }
-      #footerA {
-        grid-template-columns: auto 2.2rem auto;
-        grid-template-rows: 2.2rem;
-        position: fixed;
-        bottom: 0;
-        padding-top: 0.4rem;  padding-bottom: 0.4rem;
-        width: 100%;  height: auto;
-      }
-      #b1:hover, #b2:hover {
-        transition: .05s ease-in-out;
-      }
-      #b1:hover {
-        background-color: var(--highlightColor);
-      }
-      #b2:hover {
-        opacity: .6;
-      }
-      #b2, #searchP, #XP {
-        line-height: 2.2rem;
-      }
-      #searchCheckBox:checked+#searchP+#XP+#searchBoxIn, #searchCheckBox, #searchCheckBox:checked+#searchP+#XP {
-        display: none;
-      }
-      #searchCheckBox:checked+#searchP, #XP {
-        display: inline-block;
-      }
-      #searchP {
-        display: none;
-      }
-      @media screen and (orientation: portrait) {
-        .Lǎnchē {
-
-        }
-      }
-      @media screen and (orientation: landscape) and (max-device-width: 768px) {
-        .Lǎnchē {
-
-        }
-      }
-      @media screen and (max-device-width: 480px) {
-        * {
-          font-size: 56px;
-        }
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-           --lightColor: rgba(35, 35, 35, .87);
-           --lightColorLite: rgba(35, 35, 35, .3);
-           --highlightColor: rgba(255, 255, 255, .15);
-           --contentColor: rgba(0, 0, 0, 1);
-           --fontColor: rgba(235, 235, 235, .87);
-           --aFontColor: rgba(68, 159, 255, .87);
-           --glassOpacity: .7;
-        }
-      }
-      @media (prefers-color-scheme: light) {
-        :root {
-           --lightColor: rgba(235, 235, 235, .87);
-           --lightColorLite: rgba(235, 235, 235, .3);
-           --highlightColor: rgba(0, 0, 0, .25);
-           --contentColor: rgba(255, 255, 255, 1);
-           --fontColor: rgba(35, 35, 35, .87);
-           --aFontColor: rgba(0, 110, 225, .87);
-           --glassOpacity: .7;
-        }
-      }
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-      </style>
+      <link rel="stylesheet" type="text/css" href="styles/index.css"/>
       <link rel="shortcut icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/electrodewX-ICON.ico" />
       <link rel="manifest" href="%PUBLIC_URL%/images/icons/manifest.json" />
       <link rel="apple-touch-icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png" />
@@ -201,8 +24,10 @@
     <meta property="og:image" content="https://lleftupdownrightbar.github.io/Electrodew/images/banners/banner2021331.png" />
   </head>
   <body>
-    <nav id="navislide" class="gridEle">
-      <div></div>
+    <input type="checkbox" id="naviSideBarCheckBox" value="aNaviSideBarCheckBox" checked="checked">
+    <label id="labelNaviSideBar" for="naviSideBarCheckBox">≡コ</label>
+    <nav id="naviSideBar" class="gridEle">
+      <div>あ</div>
     </nav>
     <div id="container" class="gridEle">
       <nav id="naviBar" class="gridEle">
@@ -212,9 +37,9 @@
           <label id="searchBox" for="searchCheckBox">
             <input type="checkbox" id="searchCheckBox" value="aSearchCheckBox" checked="checked">
             <p id="searchP">&thinsp;|&ensp;Search</p>
-            <p id="XP">&ensp;X</p>
+            <p id="XP">&ensp;×</p>
             <div id="searchBoxIn">
-               <div class="gcse-search"></div>
+              <div class="gcse-search"></div>
             </div>
           </label>
         </div>
@@ -238,6 +63,18 @@
             測<a href="https://lleftupdownrightbar.github.io/Electrodew/" target="_parent" title="Electrodew">A</a>
           </div>
           <div class="Lǎnchē">
+            測 This's a fake article, it's looks like there's abundant content, but, that's NOT true.
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
             測
           </div>
           <div class="Lǎnchē">
@@ -250,15 +87,44 @@
             測
           </div>
           <div class="Lǎnchē">
-
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
+          </div>
+          <div class="Lǎnchē">
+            測
           </div>
         </div>
         <div class="VSpacer"></div>
       </div>
-      <nav id="footerA" class="gridEle">
-        <div id="A0">A</div>
-        <div id="A1">A</div>
-        <div id="A2">A</div>
+      <nav id="naviA" class="gridEle">
+        <div id="A0"></div>
+        <div id="A1">
+          <a id="A1a" href="index.html" target="_parent" title="A1">A1中文</a>
+        </div>
+        <div id="A2"></div>
       </nav>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
