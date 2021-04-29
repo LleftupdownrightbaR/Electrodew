@@ -478,7 +478,7 @@ body, .window, .windowIn, #bg, #bgmask3, #bgmask2, .buttonLink, .button, .button
   border-radius: 0px 0px 5px 0px;
 }
 #buttonH00 {
-  background: url(images/jumpingByCly.svg);
+  background: url(../images/jumpingByCly.svg);
   background-size: auto;
   background-repeat: no-repeat;
   border: 0px solid rgba(255, 255, 255, 0);
