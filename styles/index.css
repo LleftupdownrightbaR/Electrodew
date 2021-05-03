@@ -23,9 +23,12 @@ body {
   grid-template-rows: auto;
   width: 100%;  height: 100%;
 }
+.scrollBox {
+  overflow-y: auto;
+}
 .scrollX, .scrollY {
   -webkit-overflow-scrolling: touch;
-  /*white-space: nowrap;*/
+  white-space: nowrap;
   position: relative;
 }
 .scrollX {
@@ -39,20 +42,44 @@ body {
   overflow-y: auto;
 }
 .scrollXChild {
-  float: left;
+  display: inline-block;
   scroll-snap-align: center;
 }
 .Lǎnchē {
-
+  /*position: relative;*/
+}
+.buttonBlock {
+  position: relative;
+}
+img {
+  position: relative;
+  width: 300px;
+  z-index: 0;
+}
+#imgBox00 {
+  width: 300px;  height: 350px;
 }
 #labelNaviSideBar {
   line-height: 3rem;
   transform: translateX(1rem);
 }
-#naviSideBar {
+#naviSideBar, #naviSideBarFixed {
   background-color: var(--lightColorLite);
   width: 16rem;
+}
+#naviSideBar {
+  border-right: .01px solid var(--highlightColor);
   z-index: 1;
+}
+#naviSideBarIn {
+  grid-template-rows: 3.5rem auto;
+  overflow-y: auto;
+  height: 100%;  max-height: 768px;
+}
+#naviSideBarFixed {
+  grid-template-columns: auto 3rem 3rem;
+  position: fixed;
+  height: 3rem;
 }
 #container {
   grid-template-rows: 3.5rem auto 3.5rem;
@@ -62,17 +89,17 @@ body {
 #naviBar {
   grid-template-columns: auto 7rem 1rem auto;
   grid-template-rows: 2.2rem;
-  /*filter: brightness(1.2);*/
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
   position: fixed;
+  top: 0;
   height: auto;
 }
 #labelNaviSideBar, #naviSideBar, #container, #b1, #b2 {
   transition: .15s ease-in-out;
 }
 #b1 {
-  background-color: rgba(0, 0, 0, .15);
-  border: .01px solid rgba(255, 255, 255, .1);
+  background-color: var(--makeDarkColor);
+  border: .01px solid var(--makeLightColor);
   border-radius: .5rem;
   grid-template-columns: 2.2rem auto;
   grid-template-rows: 2.2rem;
@@ -87,7 +114,7 @@ body {
   position: relative;
 }
 #Electrodew {
-  background: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png);
+  background: var(--ElectrodewLogo);
   background-size: 1.5rem;
   background-repeat: no-repeat;
   border-radius: .5rem;
@@ -115,7 +142,7 @@ body {
 #naviBar, #naviA {
   width: 100%;
 }
-#naviA:after, #naviBar:after {
+#naviSideBarFixed:after, #naviA:after, #naviBar:after {
   background-color: var(--lightColorLite);
   content: '';
   -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
@@ -133,6 +160,9 @@ body {
 }
 a:hover, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
   transition: .05s ease-in-out;
+}
+#naviSideBarIn {
+  transition: .5s ease-in-out;
 }
 #b1:hover {
   background-color: var(--highlightColor);
@@ -161,6 +191,48 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
 #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar {
   overflow: none;
   transform: translateX(-16rem);
+}
+#naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar>#naviSideBarIn {
+  transform: translateX(-8rem);
+  opacity: 0;
+}
+#DroidBtnL {
+
+}
+#DroidBtn, #DroidBtnH {
+  transition: .5s ease-in-out;
+  position: absolute;
+  width: 10rem;  height: 3rem;
+  min-width: 3rem;
+}
+#DroidBtn {
+  border: 1px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  padding: .14rem;
+  left: 0;
+}
+#DroidBtnH, #DroidBtnU {
+  left: 0; right: 0; top: 0; bottom: 0;
+  margin: auto;
+}
+#DroidBtnU {
+  background-color: var(--highlightColor);
+  border-radius: 100%;
+  transition: .3s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  width: 2.5rem;  height: 2.5rem;
+}
+#DroidBtn:hover {
+  background-color: var(--highlightColor);
+  border: .01px solid var(--makeDarkColor);
+  transition: .1s ease-in-out;
+  opacity: 1;
+  padding: calc(.14rem + .09px) ;
+}
+#DroidBtnU:active {
+  transform: scale(5);
+  opacity: 1;
 }
 @media screen and (orientation: portrait) {
   #naviSideBar {
@@ -192,8 +264,15 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
     width: calc(100% + 16rem) ;
   }
 }
-@media screen and (orientation: landscape) and (max-device-width: 768px) {
-
+@media screen and (orientation: portrait) and (max-device-width: 768px) {
+  #naviSideBarIn {
+    height: 32rem;
+  }
+}
+@media screen and (orientation: landscape) and (max-device-width: 480px) {
+  #naviSideBarIn {
+    height: 16rem;
+  }
 }
 @media screen and (max-device-width: 480px) {
   * {
@@ -206,9 +285,12 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
     --lightColorLite: rgba(35, 35, 35, .3);
     --highlightColor: rgba(255, 255, 255, .15);
     --contentColor: rgba(0, 0, 0, 1);
+    --makeDarkColor: rgba(0, 0, 0, .15);
+    --makeLightColor: rgba(255, 255, 255, .1);
     --fontColor: rgba(235, 235, 235, .87);
-    --aFontColor: rgba(68, 159, 255, .87);
+    --aFontColor: rgba(0, 122, 255, .87);
     --glassOpacity: .7;
+    --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewD192.png);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -217,9 +299,12 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
     --lightColorLite: rgba(235, 235, 235, .3);
     --highlightColor: rgba(0, 0, 0, .25);
     --contentColor: rgba(255, 255, 255, 1);
-    --fontColor: rgba(35, 35, 35, .87);
-    --aFontColor: rgba(0, 110, 225, .87);
+    --makeDarkColor: rgba(0, 0, 0, .15);
+    --makeLightColor: rgba(255, 255, 255, .1);
+    --fontColor: rgba(30, 30, 30, .87);
+    --aFontColor: rgba(0, 122, 255, .87);
     --glassOpacity: .7;
+    --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewL192.png);
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
