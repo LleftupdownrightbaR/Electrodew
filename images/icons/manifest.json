@@ -8,17 +8,22 @@
       "type": "image/x-icon"
     },
     {
-      "src": "Electrodew192.png",
+      "src": "ElectrodewD192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Electrodew512.png",
+      "src": "ElectrodewD512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "Electrodew7680.png",
+      "src": "ElectrodewD1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    },
+    {
+      "src": "ElectrodewD7680.png",
       "type": "image/png",
       "sizes": "7680x7680"
     }	    
