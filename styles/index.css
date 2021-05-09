@@ -14,14 +14,43 @@ body, .gridEle {
   grid-template-rows: auto;
   grid-column-gap: 0;
   grid-row-gap: 0;
-  grid-auto-flow: column;
+  /*grid-auto-flow: column;*/
 }
 body {
+  /*background: url(https://i.imgur.com/iyVQmeY_d.webp?maxwidth=640&shape=thumb&fidelity=medium) 0 / cover fixed;*/
   background-color: var(--lightColor);
   color: var(--fontColor);
   grid-template-columns: 16rem auto;
   grid-template-rows: auto;
   width: 100%;  height: 100%;
+}
+summary {
+  cursor: pointer;
+}
+.symbol {
+  background-color: blue;
+  -webkit-mask: url(../images/symbols/symbolChevronRight.svg);
+  -webkit-mask-size: 1.45rem;
+  float: right;
+  margin-top: -1.45rem;
+  width: 1.45rem;  height: 1.45rem;
+}
+details[open]>summary>p+.symbol {
+  transform: rotate(90deg);
+}
+summary::-webkit-details-marker, .inputDN {
+  display: none;
+}
+.noSelect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+}
+.subText {
+  color: var(--subFontColor);
+  margin-left: 1rem;
 }
 .scrollBox {
   overflow-y: auto;
@@ -47,21 +76,38 @@ body {
 }
 .Lǎnchē {
   /*position: relative;*/
+  margin: .5rem;
+  padding: calc(.5rem - .5px) ;
 }
 .buttonBlock {
   position: relative;
 }
+.inTextSymbol {
+  margin-bottom: -5px;
+  width: 1.2rem;
+}
 img {
   position: relative;
   width: 300px;
-  z-index: 0;
 }
 #imgBox00 {
   width: 300px;  height: 350px;
 }
+#labelNaviSideBar, #naviSideBarFixed, #naviBar, #searchCheckBox, #searchBoxIn, #naviA {
+  position: fixed;
+}
+#naviBar, #searchCheckBox, #searchBoxIn, #naviA {
+  z-index: 1;
+}
 #labelNaviSideBar {
+  background: url(../images/symbols/symbolSideBarLeft.svg);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
   line-height: 3rem;
   transform: translateX(1rem);
+  z-index: 4;
+  width: 1.5rem;  height: 3rem;
 }
 #naviSideBar, #naviSideBarFixed {
   background-color: var(--lightColorLite);
@@ -69,7 +115,7 @@ img {
 }
 #naviSideBar {
   border-right: .01px solid var(--highlightColor);
-  z-index: 1;
+  z-index: 2;
 }
 #naviSideBarIn {
   grid-template-rows: 3.5rem auto;
@@ -78,7 +124,7 @@ img {
 }
 #naviSideBarFixed {
   grid-template-columns: auto 3rem 3rem;
-  position: fixed;
+  z-index: 3;
   height: 3rem;
 }
 #container {
@@ -90,17 +136,17 @@ img {
   grid-template-columns: auto 7rem 1rem auto;
   grid-template-rows: 2.2rem;
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
-  position: fixed;
-  top: 0;
   height: auto;
 }
 #labelNaviSideBar, #naviSideBar, #container, #b1, #b2 {
   transition: .15s ease-in-out;
 }
-#b1 {
+.Lǎnchē, #b1 {
   background-color: var(--makeDarkColor);
   border: .01px solid var(--makeLightColor);
-  border-radius: .5rem;
+  border-radius: .75rem;
+}
+#b1 {
   grid-template-columns: 2.2rem auto;
   grid-template-rows: 2.2rem;
   overflow: hidden;
@@ -117,14 +163,9 @@ img {
   background: var(--ElectrodewLogo);
   background-size: 1.5rem;
   background-repeat: no-repeat;
-  border-radius: .5rem;
+  border-radius: .75rem;
   margin: .35rem;
   width: 1.5rem;  height: 1.5rem;
-}
-#labelNaviSideBar, #searchCheckBox, #searchBoxIn {
-  display: inline-block;
-  position: fixed;
-  z-index: 2;
 }
 #searchBoxIn {
   opacity: .9;
@@ -134,6 +175,7 @@ img {
 }
 #content {
   grid-template-columns: auto 90% auto;
+  position: relative;
   width: 100%;
 }
 #contentIn {
@@ -153,7 +195,6 @@ img {
 #naviA {
   grid-template-columns: auto 90% auto;
   grid-template-rows: 2.2rem;
-  position: fixed;
   bottom: 0;
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
   height: auto;
@@ -168,7 +209,7 @@ a:hover, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
   background-color: var(--highlightColor);
 }
 a:hover, #labelNaviSideBar:hover, #b2:hover {
-  opacity: .6;
+  opacity: .3;
 }
 #b2, #searchP {
   line-height: 2.2rem;
@@ -183,12 +224,13 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
   display: inline-block;
 }
 #naviSideBarCheckBox:checked<body {
-  grid-template-columns: auto;
+  /*grid-template-columns: auto;*/
 }
 #naviSideBarCheckBox:checked+#labelNaviSideBar {
   transform: translateX(.6rem);
 }
 #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar {
+  border-right: 0px solid var(--highlightColor);
   overflow: none;
   transform: translateX(-16rem);
 }
@@ -196,43 +238,48 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
   transform: translateX(-8rem);
   opacity: 0;
 }
-#DroidBtnL {
-
+.symbol, .DroidBtn, .DroidBtnH, .DroidBtnUIn {
+  transition: .3s ease-in-out;
 }
-#DroidBtn, #DroidBtnH {
-  transition: .5s ease-in-out;
-  position: absolute;
-  width: 10rem;  height: 3rem;
+.DroidBtn {
+  border: 5px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  position: relative;
+  margin: .5rem;
+  padding: calc(.5rem - 5px) ;
+  width: auto;
+}
+.DroidBtnH {
+  /*line-height: 2.2rem;*/
+  text-align: left;
+  height: auto;
   min-width: 3rem;
 }
-#DroidBtn {
-  border: 1px solid rgba(255, 255, 255, 0);
-  overflow: hidden;
-  padding: .14rem;
-  left: 0;
+.DroidBtnU {
+  position: absolute;
 }
-#DroidBtnH, #DroidBtnU {
-  left: 0; right: 0; top: 0; bottom: 0;
-  margin: auto;
-}
-#DroidBtnU {
+.DroidBtnUIn {
   background-color: var(--highlightColor);
   border-radius: 100%;
-  transition: .3s ease-in-out;
+  display: inline-block;
   opacity: 0;
-  position: absolute;
+  margin: -.6rem;
   width: 2.5rem;  height: 2.5rem;
 }
-#DroidBtn:hover {
+.DroidBtn:hover {
   background-color: var(--highlightColor);
   border: .01px solid var(--makeDarkColor);
   transition: .1s ease-in-out;
   opacity: 1;
-  padding: calc(.14rem + .09px) ;
+  padding: calc(.5rem - .5px) ;
 }
-#DroidBtnU:active {
-  transform: scale(5);
+.DroidBtnUIn:active {
+  transition: 1s ease-in-out;
+  transform: scale(50);
   opacity: 1;
+}
+.DroidBtn:ontouchstart {
+  background-color: red;
 }
 @media screen and (orientation: portrait) {
   #naviSideBar {
@@ -249,14 +296,14 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
     left: 16rem;
   }
   #naviSideBarCheckBox:checked<body {
-    grid-template-columns: auto;
+    /*grid-template-columns: auto;*/
     width: calc(100% + 16rem) ;
   }
   #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container {
     overflow: none;
     transform: translateX(-16rem);
   }
-  #container, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar:after, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar+#topGrid+#content, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar+#topGrid+#content+#naviA, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar+#topGrid+#content+#naviA:after {
+  #container, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar+#topGrid+#content, #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar+#topGrid+#content+#naviA {
     width: calc(100% + 16rem) ;
   }
   #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container>#naviBar>#b0+#b1>#Electrodew+#searchBox>#searchCheckBox+#searchP+#XP+#searchBoxIn {
@@ -288,6 +335,7 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
     --makeDarkColor: rgba(0, 0, 0, .15);
     --makeLightColor: rgba(255, 255, 255, .1);
     --fontColor: rgba(235, 235, 235, .87);
+    --subFontColor: rgba(140, 140, 140, .87);
     --aFontColor: rgba(0, 122, 255, .87);
     --glassOpacity: .7;
     --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewD192.png);
@@ -302,6 +350,7 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
     --makeDarkColor: rgba(0, 0, 0, .15);
     --makeLightColor: rgba(255, 255, 255, .1);
     --fontColor: rgba(30, 30, 30, .87);
+    --subFontColor: rgba(125, 125, 125, .87);
     --aFontColor: rgba(0, 122, 255, .87);
     --glassOpacity: .7;
     --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewL192.png);
