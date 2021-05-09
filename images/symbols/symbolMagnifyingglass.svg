@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 52 52">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="1"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="1"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="1"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+</metadata>
+<defs/>
+<g id="圖層5" vectornator:layerName="圖層5">
+<path d="M23.3165+10.5665C16.2748+10.5665+10.5663+16.2749+10.5665+23.3165C10.5665+30.3581+16.2747+36.0665+23.3165+36.0665C26.1003+36.0665+28.5438+34.9734+30.629+33.4415L38.0352+40.8477C38.8163+41.6288+40.0668+41.6288+40.8477+40.8477C41.6288+40.0667+41.6288+38.8163+40.8477+38.0352L33.4415+30.629C34.9804+28.5427+36.0666+26.1092+36.0665+23.3165C36.0665+16.2749+30.3583+10.5665+23.3165+10.5665ZM23.3165+13.5665C28.7013+13.5665+33.0666+17.9317+33.0665+23.3165C33.0665+28.7013+28.7012+33.0665+23.3165+33.0665C17.9317+33.0665+13.5664+28.7012+13.5665+23.3165C13.5665+17.9317+17.9318+13.5665+23.3165+13.5665Z" opacity="1" fill="#000000"/>
+</g>
+</svg>
