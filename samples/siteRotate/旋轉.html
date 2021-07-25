@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title>旋轉</title>
+    <style>
+    .a, .b {
+      display: inline-block;
+      overflow: hidden;
+      width: 88px;  height: ;
+    }
+    .imga1, .imga2, .imgb1, .imgb2 {
+      display: inline-block;
+      margin-left: -88px;
+      width: 88px;  height: ;
+    }
+    .imga1 {
+      animation: A 4s ease-in infinite;
+    }
+    .imga2 {
+      animation: A 4s ease-in infinite;
+      animation-delay: 2s;
+    }
+    .imgb1 {
+      animation: A 4s linear infinite;
+    }
+    .imgb2 {
+      animation: A 4s linear infinite;
+      animation-delay: 2s;
+    }
+    @keyframes A {
+     0% {
+       transform: translateX(0px) rotateZ(-360deg);
+     }
+     100% {
+       transform: translateX(176px) rotateZ(360deg);
+     }
+    }
+    code {
+      background-color: black;
+      font-size: 20px;
+    }
+    code:hover {
+      color: white;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <img class="imga1" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+      <img class="imga2" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+    </div>
+    <div class="a">
+      <img class="imga1" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+      <img class="imga2" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+    </div>
+    <div class="a">
+      <img class="imga1" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+      <img class="imga2" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+    </div><br>
+    <code>animation: A 1s ease-in infinite;</code><br>
+    <div class="b">
+      <img class="imgb1" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+      <img class="imgb2" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+    </div>
+    <div class="b">
+      <img class="imgb1" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+      <img class="imgb2" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+    </div>
+    <div class="b">
+      <img class="imgb1" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+      <img class="imgb2" src="IMG_1523.PNG" alt="IMG_1523.PNG" />
+    </div><br>
+    <code>animation: A 1s linear infinite;</code><br>
+  </body>
+</html>
