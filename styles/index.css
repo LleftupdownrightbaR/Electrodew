@@ -28,7 +28,7 @@ summary {
   cursor: pointer;
 }
 .symbolChevR {
-  color: var(--aFontColor);
+  background-color: var(--aFontColor);
   -webkit-mask: url(../images/symbols/symbolChevronRight.svg);
   -webkit-mask-size: 1.45rem;
   float: right;
@@ -42,7 +42,7 @@ summary::-webkit-details-marker, .inputDN {
   display: none;
 }
 .naviSymbol {
-  color: var(--aFontColor);
+  background-color: var(--aFontColor);
   -webkit-mask-size: 1.5rem;
   float: right;
   width: 1.5rem;  height: 1.5rem;
