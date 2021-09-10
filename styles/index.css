@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
 }
-a, .symbol {
+a {
   color: var(--aFontColor);
   text-decoration: none;
 }
@@ -41,17 +41,18 @@ summary::-webkit-details-marker, .inputDN {
   display: none;
 }
 .naviSymbol {
+  color: var(--aFontColor);
   -webkit-mask-size: 1.5rem;
   float: right;
   width: 1.5rem;  height: 1.5rem;
 }
-.symbolHome {
+#symbolHome {
   -webkit-mask: url(../images/symbols/symbolHome.svg);
 }
-.symbolPhotoOnRectangle {
+#symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
 }
-.symbolSideBarLeft {
+#symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
 }
 .noSelect {
@@ -96,8 +97,10 @@ summary::-webkit-details-marker, .inputDN {
   position: relative;
 }
 .inTextSymbol {
+  background-color: var(--fontColor);
+  display: inline-block;
   margin-bottom: -5px;
-  width: 1.2rem;
+  width: 1.2rem;  height: 1.2rem;
 }
 img {
   position: relative;
@@ -113,6 +116,7 @@ img {
   z-index: 1;
 }
 #labelNaviSideBar {
+  -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
   line-height: 3rem;
   transform: translateX(1rem);
   z-index: 4;
