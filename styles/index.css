@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
 }
-a {
+a, .symbol {
   color: var(--aFontColor);
   text-decoration: none;
 }
@@ -28,7 +28,6 @@ summary {
   cursor: pointer;
 }
 .symbolChevR {
-  background-color: var(--aFontColor);
   -webkit-mask: url(../images/symbols/symbolChevronRight.svg);
   -webkit-mask-size: 1.45rem;
   float: right;
@@ -41,11 +40,9 @@ details[open]>summary>p+.symbolChevR {
 summary::-webkit-details-marker, .inputDN {
   display: none;
 }
-.symbolHome, .symbolPhotoOnRectangle {
-  background-color: var(--aFontColor);
+.naviSymbol {
   -webkit-mask-size: 1.5rem;
   float: right;
-  margin-top: -1.5rem;
   width: 1.5rem;  height: 1.5rem;
 }
 .symbolHome {
@@ -53,6 +50,9 @@ summary::-webkit-details-marker, .inputDN {
 }
 .symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
+}
+.symbolSideBarLeft {
+  -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
 }
 .noSelect {
   -moz-user-select: none;
@@ -113,10 +113,6 @@ img {
   z-index: 1;
 }
 #labelNaviSideBar {
-  background: url(../images/symbols/symbolSideBarLeft.svg);
-  background-size: 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center;
   line-height: 3rem;
   transform: translateX(1rem);
   z-index: 4;
@@ -217,8 +213,9 @@ a, #A1>.symbolHome, #A3>.symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
 }
 #A1, #A3 {
   grid-template-columns: 1.5rem auto 2rem;
+  line-height: 2.2rem;
 }
-a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
+a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, .symbolHome:hover+.Vspacer+#A1a, .symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
   transition: .05s ease-in-out;
 }
 #naviSideBarIn {
@@ -227,7 +224,7 @@ a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, #labelNaviSid
 #b1:hover {
   background-color: var(--highlightColor);
 }
-a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, #labelNaviSideBar:hover, #b2:hover {
+a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, .symbolHome:hover+.Vspacer+#A1a, .symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b2:hover {
   opacity: .3;
 }
 #b2, #searchP {
