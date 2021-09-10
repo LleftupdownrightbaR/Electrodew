@@ -27,19 +27,32 @@ body {
 summary {
   cursor: pointer;
 }
-.symbol {
-  background-color: blue;
+.symbolChevR {
+  background-color: var(--aFontColor);
   -webkit-mask: url(../images/symbols/symbolChevronRight.svg);
   -webkit-mask-size: 1.45rem;
   float: right;
   margin-top: -1.45rem;
   width: 1.45rem;  height: 1.45rem;
 }
-details[open]>summary>p+.symbol {
+details[open]>summary>p+.symbolChevR {
   transform: rotate(90deg);
 }
 summary::-webkit-details-marker, .inputDN {
   display: none;
+}
+.symbolHome, .symbolPhotoOnRectangle {
+  background-color: var(--aFontColor);
+  -webkit-mask-size: 1.5rem;
+  float: right;
+  margin-top: -1.5rem;
+  width: 1.5rem;  height: 1.5rem;
+}
+.symbolHome {
+  -webkit-mask: url(../images/symbols/symbolHome.svg);
+}
+.symbolPhotoOnRectangle {
+  -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
 }
 .noSelect {
   -moz-user-select: none;
@@ -138,8 +151,11 @@ img {
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
   height: auto;
 }
-#labelNaviSideBar, #naviSideBar, #container, #b1, #b2 {
+a, #A1>.symbolHome, #A3>.symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
   transition: .15s ease-in-out;
+}
+#naviSideBar, #container {
+  transition: .35s ease-in-out;
 }
 .Lǎnchē, #b1 {
   background-color: var(--makeDarkColor);
@@ -193,22 +209,25 @@ img {
   width: 100%;  height: 3rem;
 }
 #naviA {
-  grid-template-columns: auto 90% auto;
+  grid-template-columns: auto 3.8rem auto 3.8rem auto;
   grid-template-rows: 2.2rem;
   bottom: 0;
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
   height: auto;
 }
-a:hover, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
+#A1, #A3 {
+  grid-template-columns: 1.5rem auto 2rem;
+}
+a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
   transition: .05s ease-in-out;
 }
 #naviSideBarIn {
-  transition: .5s ease-in-out;
+  transition: .6s ease-in;
 }
 #b1:hover {
   background-color: var(--highlightColor);
 }
-a:hover, #labelNaviSideBar:hover, #b2:hover {
+a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, #labelNaviSideBar:hover, #b2:hover {
   opacity: .3;
 }
 #b2, #searchP {
@@ -238,15 +257,15 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
   transform: translateX(-8rem);
   opacity: 0;
 }
-.symbol, .DroidBtn, .DroidBtnH, .DroidBtnUIn {
+.symbolChevR, .DroidBtn, .DroidBtnH, .DroidBtnUIn {
   transition: .3s ease-in-out;
 }
 .DroidBtn {
-  border: 5px solid rgba(255, 255, 255, 0);
+  border: .25rem solid rgba(255, 255, 255, 0);
   overflow: hidden;
   position: relative;
   margin: .5rem;
-  padding: calc(.5rem - 5px) ;
+  padding: .25rem;
   width: auto;
 }
 .DroidBtnH {
@@ -271,7 +290,7 @@ a:hover, #labelNaviSideBar:hover, #b2:hover {
   border: .01px solid var(--makeDarkColor);
   transition: .1s ease-in-out;
   opacity: 1;
-  padding: calc(.5rem - .5px) ;
+  padding: .5rem;
 }
 .DroidBtnUIn:active {
   transition: 1s ease-in-out;
