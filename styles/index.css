@@ -28,6 +28,7 @@ summary {
   cursor: pointer;
 }
 .symbolChevR {
+  color: var(--aFontColor);
   -webkit-mask: url(../images/symbols/symbolChevronRight.svg);
   -webkit-mask-size: 1.45rem;
   float: right;
@@ -151,7 +152,7 @@ img {
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
   height: auto;
 }
-a, #A1>.symbolHome, #A3>.symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
+a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
   transition: .15s ease-in-out;
 }
 #naviSideBar, #container {
@@ -219,7 +220,7 @@ a, #A1>.symbolHome, #A3>.symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
   grid-template-columns: 1.5rem auto 2rem;
   line-height: 2.2rem;
 }
-a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, .symbolHome:hover+.Vspacer+#A1a, .symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
+a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.Vspacer+#A1a, #symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
   transition: .05s ease-in-out;
 }
 #naviSideBarIn {
@@ -228,7 +229,7 @@ a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, .symbolHome:h
 #b1:hover {
   background-color: var(--highlightColor);
 }
-a:hover, #A1:hover>.symbolHome, #A3:hover>.symbolPhotoOnRectangle, .symbolHome:hover+.Vspacer+#A1a, .symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b2:hover {
+a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.Vspacer+#A1a, #symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b2:hover {
   opacity: .3;
 }
 #b2, #searchP {
