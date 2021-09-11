@@ -46,15 +46,14 @@ summary::-webkit-details-marker, .inputDN {
   -webkit-mask-position: center;
   -webkit-mask-size: 1.5rem 1.5rem;
   float: right;
+  margin-top: 0.375rem;
   width: 1.5rem;  height: 1.5rem;
 }
 #symbolHome {
   -webkit-mask: url(../images/symbols/symbolHome.svg);
-  margin-bottom: -0.375rem;
 }
 #symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
-  margin-bottom: -0.375rem;
 }
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
