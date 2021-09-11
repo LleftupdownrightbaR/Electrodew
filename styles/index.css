@@ -50,11 +50,11 @@ summary::-webkit-details-marker, .inputDN {
 }
 #symbolHome {
   -webkit-mask: url(../images/symbols/symbolHome.svg);
-  margin-top: 0.75rem;
+  margin-bottom: -0.375rem;
 }
 #symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
-  margin-top: 0.75rem;
+  margin-bottom: -0.375rem;
 }
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
@@ -120,7 +120,7 @@ img {
   z-index: 1;
 }
 #labelNaviSideBar {
-  grid-template-rows: auto 1.5rem auto;
+  grid-template-rows: 0.375rem 1.5rem auto;
   line-height: 3rem;
   transform: translateX(1rem);
   z-index: 4;
@@ -223,7 +223,7 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
   grid-template-columns: 1.5rem auto 2rem;
   line-height: 2.2rem;
 }
-a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.Vspacer+#A1a, #symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
+a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.VSpacer+#A1a, #symbolPhotoOnRectangle:hover+.VSpacer+#A3a, #labelNaviSideBar:hover, #b1:hover, #b2:hover {
   transition: .05s ease-in-out;
 }
 #naviSideBarIn {
@@ -232,7 +232,7 @@ a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:h
 #b1:hover {
   background-color: var(--highlightColor);
 }
-a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.Vspacer+#A1a, #symbolPhotoOnRectangle:hover+.Vspacer+#A3a, #labelNaviSideBar:hover, #b2:hover {
+a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.VSpacer+#A1a, #symbolPhotoOnRectangle:hover+.VSpacer+#A3a, #labelNaviSideBar:hover, #b2:hover {
   opacity: .3;
 }
 #b2, #searchP {
