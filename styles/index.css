@@ -43,6 +43,8 @@ summary::-webkit-details-marker, .inputDN {
 }
 .naviSymbol {
   background-color: var(--aFontColor);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
   -webkit-mask-size: 1.5rem;
   float: right;
   width: 1.5rem;  height: 1.5rem;
@@ -55,6 +57,8 @@ summary::-webkit-details-marker, .inputDN {
 }
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 .noSelect {
   -moz-user-select: none;
