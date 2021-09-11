@@ -50,11 +50,11 @@ summary::-webkit-details-marker, .inputDN {
 }
 #symbolHome {
   -webkit-mask: url(../images/symbols/symbolHome.svg);
-  padding-top: 0.75rem;
+  margin-top: 0.75rem;
 }
 #symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
-  padding-top: 0.75rem;
+  margin-top: 0.75rem;
 }
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
@@ -120,11 +120,10 @@ img {
   z-index: 1;
 }
 #labelNaviSideBar {
-  -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
+  grid-template-rows: auto 1.5rem auto;
   line-height: 3rem;
   transform: translateX(1rem);
   z-index: 4;
-  padding-top: 0.75rem;  padding-bottom: 0.75rem;
   width: 1.5rem;  height: 3rem;
 }
 #naviSideBar, #naviSideBarFixed {
