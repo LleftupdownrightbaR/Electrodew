@@ -46,7 +46,7 @@ summary::-webkit-details-marker, .inputDN {
   -webkit-mask-position: center;
   -webkit-mask-size: 1.5rem 1.5rem;
   float: right;
-  margin-top: 0.375rem;
+  margin-top: 0.35rem;
   width: 1.5rem;  height: 1.5rem;
 }
 #symbolHome {
@@ -57,6 +57,7 @@ summary::-webkit-details-marker, .inputDN {
 }
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
+  margin-top: 0.75rem;
 }
 .noSelect {
   -moz-user-select: none;
@@ -102,7 +103,7 @@ summary::-webkit-details-marker, .inputDN {
 .inTextSymbol {
   background-color: var(--fontColor);
   display: inline-block;
-  margin-bottom: -5px;
+  margin-top: 0;  margin-bottom: -5px;
   width: 1.2rem;  height: 1.2rem;
 }
 img {
