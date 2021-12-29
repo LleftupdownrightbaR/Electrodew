@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Electrodew</title>
+      <link rel="stylesheet" type="text/css" href="..styles/index.css"/>
+      <link rel="shortcut icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/electrodewX-ICON.ico" />
+      <link rel="manifest" href="%PUBLIC_URL%/images/icons/manifest.json" />
+      <link rel="apple-touch-icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png" />
+    <meta name="theme-color" content="#58acff" />
+    <meta name="author" content="LleftupdownrightbaR">
+    <meta name="language" content="zh-Hant-TW">
+    <meta name="distribution" content="global">
+    <meta name="google-site-verification" content="xsisT6i3O-KlKAwbXZna01ZzjHKTA5XAvA5zmj01xdE" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Electrodew" />
+    <meta name="twitter:creator" content="@LleftupdownrightbaR" />
+    <meta property="og:url" content="https://lleftupdownrightbar.github.io/Electrodew/" />
+    <meta property="og:title" content="Electrodew" />
+    <meta property="og:description" content="Electrodew website." />
+    <meta property="og:image" content="https://lleftupdownrightbar.github.io/Electrodew/images/banners/banner2021331.png" />
+  </head>
+  <body>
+    <div id="container" class="gridEle">
+      <nav id="naviBar" class="gridEle">
+        <div id="b0"></div>
+        <div id="b1" class="gridEle">
+          <a id="Electrodew" href="index.html" target="_parent" title="Electrodew"></a>
+          <label id="searchBox" for="searchCheckBox">
+            <input type="checkbox" id="searchCheckBox" value="aSearchCheckBox" checked="checked">
+            <p id="searchP">&thinsp;|&ensp;Search</p>
+            <p id="XP">&ensp;×</p>
+            <div id="searchBoxIn">
+              <div class="gcse-search"></div>
+            </div>
+          </label>
+        </div>
+        <a id="b2" href="#" target="_parent" title="restToTop">
+          <b>↑</b>
+        </a>
+        <div id="b3"></div>
+      </nav>
+      <div id="topGrid" class="gridEle"></div>
+      <div id="content" class="gridEle">
+        <div class="VSpacer"></div>
+        <div id="contentIn" class="pytc">
+          <h1>PYTCalc</h1>
+          <h4>A Pythagorean theorem calculator</h4>
+          <span class="subText">弦長計算</span>
+          <div class="Lǎnchē">
+            <p>a：</p><input v-model="a" placeholder="請輸入勾或股長">
+            <p>b：</p><input v-model="b" placeholder="請輸入勾或股長">
+            <p>算式輸出：{{ a }}<sup>2</sup>+{{ b }}<sup>2</sup>={{ Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)) }}<sup>2</sup></p>
+          </div>
+          <span class="subText">勾股計算</span>
+          <div class="Lǎnchē">
+            <p>a：</p><input v-model="a2" placeholder="請輸入勾或股長">
+            <p>c：</p><input v-model="c" placeholder="請輸入弦長">
+            <p>算式輸出：{{ a2 }}<sup>2</sup>+{{ Math.sqrt(Math.pow(c, 2)-Math.pow(a2, 2)) }}<sup>2</sup>={{ c }}<sup>2</sup></p>
+          </div>
+        </div>
+        <div class="VSpacer"></div>
+      </div>
+      <nav id="naviA" class="gridEle">
+        <div id="A0"></div>
+        <div id="A1" class="gridEle">
+          <div id="symbolHome" class="naviSymbol"></div>
+          <div class="VSpacer"></div>
+          <a id="A1a" href="index.html" target="_parent" title="A1">首頁</a>
+        </div>
+        <div id="A2"></div>
+        <div id="A3" class="gridEle">
+          <div id="symbolPhotoOnRectangle" class="naviSymbol"></div>
+          <div class="VSpacer"></div>
+          <a id="A3a" href="index.html" target="_parent" title="A3">圖庫</a>
+        </div>
+        <div id="A4"></div>
+      </nav>
+    </div>
+    <script src="https://unpkg.com/vue@3.2.26"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
