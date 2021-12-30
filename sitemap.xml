@@ -9,7 +9,28 @@
 
 <url>
   <loc>https://lleftupdownrightbar.github.io/Electrodew/</loc>
-  <lastmod>2021-04-09T08:21:00+00:00</lastmod>
+  <lastmod>2021-12-30T09:11:59+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://lleftupdownrightbar.github.io/Electrodew/index.html</loc>
+  <lastmod>2021-12-30T09:11:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lleftupdownrightbar.github.io/Electrodew/PYTCalc/index.html</loc>
+  <lastmod>2021-12-30T09:11:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lleftupdownrightbar.github.io/Electrodew/samples/siteA/</loc>
+  <lastmod>2021-12-30T09:11:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lleftupdownrightbar.github.io/Electrodew/samples/siteA/index.html</loc>
+  <lastmod>2021-12-30T09:11:59+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
