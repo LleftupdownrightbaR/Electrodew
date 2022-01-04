@@ -33,9 +33,17 @@ summary::-webkit-details-marker, .inputDN {
   display: none;
 }
 .naviSymbol {
+  -webkit-mask-position: center;
+  -webkit-mask-size: 1.5rem 1.5rem;
   float: right;
   margin-top: 0.35rem;
   width: 1.5rem;  height: 1.5rem;
+}
+#symbolHome {
+  -webkit-mask: url(../images/symbols/symbolHome.svg);
+}
+#symbolPhotoOnRectangle {
+  -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
 }
 .noSelect {
   -moz-user-select: none;
@@ -71,7 +79,7 @@ summary::-webkit-details-marker, .inputDN {
   scroll-snap-align: center;
 }
 .Lǎnchē {
-  background-color: orange;
+  /*background-color: orange;*/
   /*position: relative;*/
   margin: .5rem;
   padding: calc(.5rem - .5px) ;
@@ -106,7 +114,11 @@ img {
   padding-top: 0.4rem;  padding-bottom: 0.4rem;
   height: auto;
 }
+.Lǎnchē, #b1 {
+  border-radius: .75rem;
+}
 .inputT {
+  border-radius: .5rem;
   width: 99.5%;
 }
 #b1 {
@@ -122,6 +134,7 @@ img {
   position: relative;
 }
 #Electrodew {
+  border-radius: .75rem;
   margin: .35rem;
   width: 1.5rem;  height: 1.5rem;
 }
@@ -171,6 +184,7 @@ img {
   display: inline-block;
 }
 .DroidBtn {
+  border: .25rem solid rgba(255, 255, 255, 0);
   overflow: hidden;
   position: relative;
   margin: .5rem;
@@ -187,6 +201,7 @@ img {
   position: absolute;
 }
 .DroidBtnUIn {
+  border-radius: 100%;
   display: inline-block;
   margin: -.6rem;
   width: 2.5rem;  height: 2.5rem;
@@ -196,4 +211,3 @@ img {
     font-size: 56px;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');

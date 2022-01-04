@@ -4,7 +4,8 @@ const PYTCalc = {
      a: '',
      b: '',
      a2: '',
-     c: ''
+     c: '',
+     angleA: ''
     }
   }
 }

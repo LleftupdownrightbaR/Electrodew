@@ -1,0 +1,128 @@
+a {
+  color: var(--aFontColor);
+  text-decoration: none;
+}
+body {
+  /*background: url(https://i.imgur.com/iyVQmeY_d.webp?maxwidth=640&shape=thumb&fidelity=medium) 0 / cover fixed;*/
+  background-color: var(--lightColor);
+  color: var(--fontColor);
+}
+.symbolChevR {
+  background-color: var(--aFontColor);
+  -webkit-mask: url(../images/symbols/symbolChevronRight.svg);
+  -webkit-mask-size: 1.45rem;
+}
+details[open]>summary>p+.symbolChevR {
+  transform: rotate(90deg);
+}
+.naviSymbol {
+  background-color: var(--aFontColor);
+  -webkit-mask-position: center;
+  -webkit-mask-size: 1.5rem 1.5rem;
+}
+#symbolHome {
+  -webkit-mask: url(../images/symbols/symbolHome.svg);
+}
+#symbolPhotoOnRectangle {
+  -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
+}
+.subText {
+  color: var(--subFontColor);
+}
+.inTextSymbol {
+  background-color: var(--fontColor);
+}
+a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2 {
+  transition: .15s ease-in-out;
+}
+#container {
+  transition: .35s ease-in-out;
+}
+.inputT, .Lǎnchē, #b1 {
+  background-color: var(--makeDarkColor);
+  border: .01px solid var(--makeLightColor);
+  border-radius: .75rem;
+}
+.inputT {
+  border-radius: .5rem;
+}
+#b2 {
+  color: var(--fontColor);
+}
+#Electrodew {
+  background: var(--ElectrodewLogo);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  border-radius: .75rem;
+}
+#searchBoxIn {
+  opacity: .9;
+}
+#naviA:after, #naviBar:after {
+  background-color: var(--lightColorLite);
+  -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
+}
+a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.VSpacer+#A1a, #symbolPhotoOnRectangle:hover+.VSpacer+#A3a, #b2:hover {
+  transition: .05s ease-in-out;
+  opacity: .3;
+}
+#b1:hover {
+  background-color: var(--highlightColor);
+  transition: .05s ease-in-out;
+}
+.symbolChevR, .DroidBtn, .DroidBtnH, .DroidBtnUIn {
+  transition: .3s ease-in-out;
+}
+.DroidBtn {
+  border: .25rem solid rgba(255, 255, 255, 0);
+}
+.DroidBtnUIn {
+  background-color: var(--highlightColor);
+  border-radius: 100%;
+  opacity: 0;
+}
+.DroidBtn:hover {
+  background-color: var(--highlightColor);
+  border: .01px solid var(--makeDarkColor);
+  transition: .1s ease-in-out;
+  opacity: 1;
+  padding: .5rem;
+}
+.DroidBtnUIn:active {
+  transition: 1s ease-in-out;
+  transform: scale(50);
+  opacity: 1;
+}
+.DroidBtn:active {
+  /*background-color: red;*/
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lightColor: rgba(0, 0, 0, .87);
+    --lightColorLite: rgba(35, 35, 35, .3);
+    --highlightColor: rgba(255, 255, 255, .15);
+    --contentColor: rgba(0, 0, 0, 1);
+    --makeDarkColor: rgba(0, 0, 0, .15);
+    --makeLightColor: rgba(255, 255, 255, .1);
+    --fontColor: rgba(235, 235, 235, .87);
+    --subFontColor: rgba(140, 140, 140, .87);
+    --aFontColor: rgba(0, 122, 255, .87);
+    --glassOpacity: .7;
+    --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewD192.png);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --lightColor: rgba(235, 235, 235, .87);
+    --lightColorLite: rgba(235, 235, 235, .3);
+    --highlightColor: rgba(0, 0, 0, .25);
+    --contentColor: rgba(255, 255, 255, 1);
+    --makeDarkColor: rgba(0, 0, 0, .15);
+    --makeLightColor: rgba(255, 255, 255, .1);
+    --fontColor: rgba(30, 30, 30, .87);
+    --subFontColor: rgba(125, 125, 125, .87);
+    --aFontColor: rgba(0, 122, 255, .87);
+    --glassOpacity: .7;
+    --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewL192.png);
+  }
+}

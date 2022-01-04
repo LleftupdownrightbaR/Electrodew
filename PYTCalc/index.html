@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Electrodew</title>
-      <link rel="stylesheet" type="text/css" href="../styles/index.css"/>
+      <link rel="stylesheet" type="text/css" href="../styles/simplELayout.css"/>
+      <link rel="stylesheet" type="text/css" href="../styles/simplEGraphic.css"/>
+      <!--<link rel="stylesheet" type="text/css" href="../styles/index.css"/>-->
       <link rel="shortcut icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/electrodewX-ICON.ico" />
       <link rel="manifest" href="%PUBLIC_URL%/images/icons/manifest.json" />
       <link rel="apple-touch-icon" href="https://lleftupdownrightbar.github.io/Electrodew/images/icons/Electrodew192.png" />
@@ -45,19 +47,89 @@
       <div id="content" class="gridEle">
         <div class="VSpacer"></div>
         <div id="contentIn" class="pytc">
-          <h1>PYTCalc</h1>
-          <h4>A Pythagorean theorem calculator</h4>
+          <header>
+            <h1>PYTCalc</h1>
+            <h4>A Pythagorean theorem calculator</h4>
+          </header>
           <span class="subText">弦長計算</span>
           <div class="Lǎnchē">
-            <p>a：</p><input v-model="a" placeholder="請輸入勾或股長">
-            <p>b：</p><input v-model="b" placeholder="請輸入勾或股長">
-            <p>算式輸出：{{ a }}<sup>2</sup>+{{ b }}<sup>2</sup>={{ Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)) }}<sup>2</sup></p>
+            <p>a：</p><input class="inputT" v-model="a" placeholder="請輸入勾或股長">
+            <p>b：</p><input class="inputT" v-model="b" placeholder="請輸入勾或股長">
+            <p>算式輸出：{{ a }}²+{{ b }}²={{ Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)) }}²</p>
           </div>
           <span class="subText">勾股計算</span>
           <div class="Lǎnchē">
-            <p>a：</p><input v-model="a2" placeholder="請輸入勾或股長">
-            <p>c：</p><input v-model="c" placeholder="請輸入弦長">
-            <p>算式輸出：{{ a2 }}<sup>2</sup>+{{ Math.sqrt(Math.pow(c, 2)-Math.pow(a2, 2)) }}<sup>2</sup>={{ c }}<sup>2</sup></p>
+            <p>a：</p><input class="inputT" v-model="a2" placeholder="請輸入勾或股長">
+            <p>c：</p><input class="inputT" v-model="c" placeholder="請輸入弦長">
+            <p>算式輸出：{{ a2 }}²+{{ Math.sqrt(Math.pow(c, 2)-Math.pow(a2, 2)) }}²={{ c }}²</p>
+          </div>
+          <span class="subText">角度計算</span>
+          <div class="Lǎnchē">
+            <input class="inputT" v-model="angleA" placeholder="直角三角形的銳角">°
+            <p>另一銳角：{{ 90-angleA }}°</p>
+            <label id="DroidBtn00" class="gridEle DroidBtn noSelect" for="aBtn00" target="_parent" title="Ab" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+              <input type="checkbox" id="aBtn00" class="inputDN" value="aBtn00" checked="checked">
+              <div class="DroidBtnH">button</div>
+              <div class="DroidBtnU">
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+                <div class="DroidBtnUIn"></div>
+              </div>
+            </label>
           </div>
         </div>
         <div class="VSpacer"></div>

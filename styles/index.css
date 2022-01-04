@@ -24,6 +24,9 @@ body {
   grid-template-rows: auto;
   width: 100%;  height: 100%;
 }
+h1 {
+  font-size: 2rem;
+}
 summary {
   cursor: pointer;
 }
@@ -68,6 +71,7 @@ summary::-webkit-details-marker, .inputDN {
 }
 .subText {
   color: var(--subFontColor);
+  font-size: .75rem;
   margin-left: 1rem;
 }
 .scrollBox {
@@ -113,7 +117,7 @@ img {
 #imgBox00 {
   width: 300px;  height: 350px;
 }
-#labelNaviSideBar, #naviSideBarFixed, #naviBar, #searchCheckBox, #searchBoxIn, #naviA {
+#labelNaviSideBar, #naviSideBarFixed, #naviSideBarContent, #naviBar, #searchCheckBox, #searchBoxIn, #naviA {
   position: fixed;
 }
 #naviBar, #searchCheckBox, #searchBoxIn, #naviA {
@@ -161,10 +165,14 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #labelNaviSideBar, #b1, #b2 {
 #naviSideBar, #container {
   transition: .35s ease-in-out;
 }
-.Lǎnchē, #b1 {
+.inputT, .Lǎnchē, #b1 {
   background-color: var(--makeDarkColor);
   border: .01px solid var(--makeLightColor);
   border-radius: .75rem;
+}
+.inputT {
+  border-radius: .5rem;
+  width: 99.5%;
 }
 #b1 {
   grid-template-columns: 2.2rem auto;
@@ -302,10 +310,13 @@ a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:h
   transform: scale(50);
   opacity: 1;
 }
-.DroidBtn:ontouchstart {
-  background-color: red;
+.DroidBtn:active {
+  /*background-color: red;*/
 }
 @media screen and (orientation: portrait) {
+  #naviSideBarCheckBox:checked<body {
+    grid-template-columns: auto;
+  }
   #naviSideBar {
     -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
     position: fixed;
