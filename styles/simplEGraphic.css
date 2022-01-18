@@ -26,7 +26,7 @@ details[open]>summary>p+.symbolChevR {
 #symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
 }
-.subText {
+.subText, .subTextNM {
   color: var(--subFontColor);
 }
 .inTextSymbol {
@@ -35,16 +35,19 @@ details[open]>summary>p+.symbolChevR {
 a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2 {
   transition: .15s ease-in-out;
 }
-#container {
+#naviBar, #container, .Lǎnchē, #naviA {
   transition: .35s ease-in-out;
 }
-.inputT, .Lǎnchē, #b1 {
+.Lǎnchē, #b1, .theMSG {
   background-color: var(--makeDarkColor);
   border: .01px solid var(--makeLightColor);
   border-radius: .75rem;
 }
 .inputT {
+  background-color: var(--lightColorLite);
+  border: unset;
   border-radius: .5rem;
+  color: var(--fontColor);
 }
 #b2 {
   color: var(--fontColor);
@@ -57,6 +60,40 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2 {
 }
 #searchBoxIn {
   opacity: .9;
+}
+.theMSG {
+  border: unset;
+}
+.theMSGIn, .theMSGInBgN {
+  border-radius: 0 0 .73rem .73rem;
+}
+.theMSGIn {
+  background-color: var(--contentColor);
+}
+.theMSGT {
+  font-weight: bold;
+}
+#msg01 {
+  background: url(https://i.imgur.com/mG5tGdC.png);
+}
+#msg02, #theMSGT02 {
+  background: url(https://i.imgur.com/tmsPtRM.jpg);
+}
+#msg01, #msg02, #theMSGT02 {
+  background-repeat: no-repeat;
+}
+#msg01, #msg02 {
+  background-size: cover;
+}
+#theMSGT01 {
+  color: #fff;
+}
+#theMSGT02 {
+  background-size: 11.9rem 6.69375rem;
+  background-position: bottom right;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 #naviA:after, #naviBar:after {
   background-color: var(--lightColorLite);
@@ -86,7 +123,7 @@ a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:h
   border: .01px solid var(--makeDarkColor);
   transition: .1s ease-in-out;
   opacity: 1;
-  padding: .5rem;
+  padding: calc(.5rem - .01px) ;
 }
 .DroidBtnUIn:active {
   transition: 1s ease-in-out;
@@ -126,3 +163,4 @@ a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:h
     --ElectrodewLogo: url(https://lleftupdownrightbar.github.io/Electrodew/images/icons/ElectrodewL192.png);
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');

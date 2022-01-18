@@ -1,7 +1,4 @@
 /*Must be placed after "simplELayout.css".*/
-body {
-  grid-template-columns: 16rem auto;
-}
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
   margin-top: 0.75rem;
@@ -30,7 +27,7 @@ body {
   grid-template-rows: 3.5rem auto;
   transition: .6s ease-in;
   overflow-y: auto;
-  height: 100%;  max-height: 768px;
+  height: 100%;  max-height: 100vh;
 }
 #naviSideBarFixed {
   grid-template-columns: auto 3rem 3rem;
@@ -81,11 +78,14 @@ body {
   body, #naviBar, #naviA, #searchBoxIn {
     width: calc(100% - 16rem) ;
   }
+  body {
+    grid-template-columns: 16rem auto;
+  }
   #searchBoxIn {
     left: 16rem;
   }
   #naviSideBarCheckBox:checked<body {
-    /*grid-template-columns: auto;*/
+    grid-template-columns: auto;
     width: calc(100% + 16rem) ;
   }
   #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar+#container {
@@ -100,7 +100,7 @@ body {
     width: calc(100% + 16rem) ;
   }
 }
-@media screen and (orientation: portrait) and (max-device-width: 768px) {
+/*@media screen and (orientation: portrait) and (max-device-width: 768px) {
   #naviSideBarIn {
     height: 32rem;
   }
@@ -109,4 +109,4 @@ body {
   #naviSideBarIn {
     height: 16rem;
   }
-}
+}*/
