@@ -3,7 +3,7 @@
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
   margin-top: 0.75rem;
 }
-#labelNaviSideBar, #naviSideBarFixed, #naviSideBarContent {
+#labelNaviSideBar, #naviSideBarFixed, .contentWindow {
   position: fixed;
 }
 #labelNaviSideBar {
@@ -24,13 +24,12 @@
   z-index: 2;
 }
 #naviSideBarIn {
-  grid-template-rows: 3.5rem auto;
   transition: .6s ease-in;
-  overflow-y: auto;
-  height: 100%;  max-height: 100vh;
+  height: 100vh;  max-height: 100vh;
 }
 #naviSideBarFixed {
   grid-template-columns: auto 3rem 3rem;
+  grid-template-rows: 3rem;
   z-index: 3;
   height: 3rem;
 }
@@ -45,9 +44,6 @@
 #labelNaviSideBar:hover {
   transition: .05s ease-in-out;
   opacity: .3;
-}
-#naviSideBarCheckBox {
-  display: none;
 }
 #naviSideBarCheckBox:checked<body {
   /*grid-template-columns: auto;*/

@@ -25,25 +25,52 @@
     <meta property="og:image" content="https://lleftupdownrightbar.github.io/Electrodew/images/banners/banner2021331.png" />
   </head>
   <body>
-    <input type="checkbox" id="naviSideBarCheckBox" value="aNaviSideBarCheckBox" checked="checked">
-    <label id="labelNaviSideBar" class="noSelect" for="naviSideBarCheckBox" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+    <input type="checkbox" id="naviSideBarCheckBox" class="inputDN" value="aNaviSideBarCheckBox" checked="checked">
+    <label id="labelNaviSideBar" class="gridEle noSelect" for="naviSideBarCheckBox" unselectable="on" onselectstart="return false;" onmousedown="return false;">
       <div class="VSpacer"></div>
       <div id="symbolSideBarLeft" class="naviSymbol"></div>
     </label>
     <nav id="naviSideBar" class="gridEle">
       <div id="naviSideBarIn" class="gridEle">
-        <div id="naviSideBarFixed" class="gridEle">
+        <div id="naviSideBarFixed" class="gridEle noSelect" unselectable="on" onselectstart="return false;" onmousedown="return false;">
           <div class="VSpacer"></div>
+          <input type="checkbox" id="infoCheckBox" class="inputDN" value="anInfoCheckBox" checked="checked">
           <label id="infoBtn" for="infoCheckBox">
-            <input type="checkbox" id="infoCheckBox" value="anInfoCheckBox" checked="checked">
+            <div id="infoBtnIn">
+              <div id="symbolCircleInfo" class="naviSymbol"></div>
+            </div>
           </label>
+          <div id="infoPopout" class="gridEle popoutBox">
+            <div class="VSpacer"></div>
+            <label class="quitAreaBtn" for="infoCheckBox"></label>
+            <div class="popoutBoxIn">
+              <header id="popoutBoxFixed" class="gridEle headerNM">
+                <div class="VSpacer"></div>
+                <h4 class="popoutTitle">information</h4>
+                <label id="infoBtnC" class="textBtn" for="infoCheckBox">
+                  關閉：）
+                </label>
+              </header>
+              <div id="popoutContent" class="contentWindow">
+                <p class="subTextNarrow">
+                  Electrodew<br>
+                  Popout message.
+                </p>
+              </div>
+            </div>
+          </div>
           <label id="sideBtn" for="sideCheckBox">
-            <input type="checkbox" id="sideCheckBox" value="aSideCheckBox" checked="checked">
+            <div id="sideBtnIn">
+              <input type="checkbox" id="sideCheckBox" class="inputDN" value="aSideCheckBox">
+              <div id="symbolCircleEllipsis" class="naviSymbol"></div>
+            </div>
           </label>
         </div>
-        <div class="HSpacer"></div>
-        <div class="naviSideBarContent">
+        <div class="contentWindow">
           <div class="buttonBlock">
+            <header class="headerNarrow">
+              <h1>Electrodew</h1>
+            </header>
             <label id="DroidBtn00" class="gridEle DroidBtn noSelect" for="aBtn00" target="_parent" title="Ab" unselectable="on" onselectstart="return false;" onmousedown="return false;">
               <input type="checkbox" id="aBtn00" class="inputDN" value="aBtn00" checked="checked">
               <div class="DroidBtnH">button</div>
@@ -175,7 +202,7 @@
       </div>
     </nav>
     <div id="container" class="gridEle">
-      <nav id="naviBar" class="gridEle">
+      <nav id="naviBar" class="gridEle noSelect" unselectable="on" onselectstart="return false;" onmousedown="return false;">
         <div id="b0"></div>
         <div id="b1" class="gridEle">
           <a id="Electrodew" href="index.html" target="_parent" title="Electrodew"></a>
@@ -195,7 +222,6 @@
       </nav>
       <div id="topGrid" class="gridEle"></div>
       <div id="content" class="gridEle">
-        <div class="VSpacer"></div>
         <div id="contentIn">
           <div id="topMSG" class="gridEle">
             <div id="msgBox" class="scrollX">
@@ -385,9 +411,8 @@
             一般<a href="https://lleftupdownrightbar.github.io/Electrodew/index.html" target="_parent" title="Electrodew">index.html</a>
           </div>
         </div>
-        <div class="VSpacer"></div>
       </div>
-      <nav id="naviA" class="gridEle">
+      <nav id="naviA" class="gridEle noSelect" unselectable="on" onselectstart="return false;" onmousedown="return false;">
         <div id="A0"></div>
         <div id="A1" class="gridEle">
           <a id="symbolHome" class="naviSymbol" href="index.html" target="_parent" title="Home"></a>

@@ -19,6 +19,14 @@ body {
 header {
   margin-left: calc(5vw + 1rem) ;
 }
+.headerNarrow {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin-left: 1rem;
+}
+.headerNM {
+  margin: 0;
+}
 h1 {
   font-size: 2rem;
 }
@@ -45,11 +53,14 @@ summary::-webkit-details-marker, .inputDN {
   user-select: none;
   -ms-user-select: none;
 }
-.subText, .subTextNM {
+.subText, .subTextNarrow, .subTextNM {
   font-size: .75rem;
 }
 .subText {
   margin-left: calc(5vw + 1rem) ;
+}
+.subTextNarrow {
+  margin-left: 1rem;
 }
 .scrollBox {
   overflow-y: auto;
@@ -130,7 +141,6 @@ summary::-webkit-details-marker, .inputDN {
   width: 100%;  max-height: 80vh;
 }
 #content {
-  /*grid-template-columns: 5% auto 5%;*/
   position: relative;
   width: 100%;
 }
@@ -145,7 +155,7 @@ img {
   width: 100%;  height: 13.4rem;
   max-width: 100%;
 }
-#topMSG {
+#topMSG, .popoutBoxIn {
   overflow: hidden;
   position: relative;
 }
@@ -226,8 +236,57 @@ img {
   margin: -.6rem;
   width: 2.5rem;  height: 2.5rem;
 }
+.quitAreaBtn, .popoutBox, #popoutBoxFixed, .contentWindow {
+  position: fixed;
+}
+.quitAreaBtn, .popoutBox {
+  top: 0;  left: 0;
+  width: 100vw;  height: 100vh;
+}
+.quitAreaBtn {
+  z-index: -1;
+}
+.popoutBox {
+  z-index: 5;
+}
+.popoutBoxIn {
+  margin-top: 2.9296875vh;
+  width: 76.57393851vw;  height: 94.140625vh;
+  max-width: 76.57393851vw;
+}
+#popoutBoxFixed {
+  grid-template-columns: 4.4rem auto 4.4rem;
+  grid-template-rows: 3rem;
+  z-index: 6;
+  width: 76.57393851vw;  height: 3rem;
+}
+.contentWindow {
+  overflow-y: auto;
+  padding-top: 3rem;
+  width: 16rem;  height: calc(100vh - 3rem) ;
+}
+#popoutContent {
+  width: 76.57393851vw;  height: 94.140625vh;
+}
+.popoutTitle, .textBtn {
+  text-align: center;
+  line-height: 3rem;
+}
+#infoBtnIn, #sideBtnIn {
+  margin-top: 0.375rem;
+}
+#infoPopout {
+  grid-template-columns: 11.713030745vw auto 11.713030745vw;
+}
 @media screen and (max-device-width: 480px) {
   * {
     font-size: 56px;
+  }
+  .popoutBoxIn {
+    margin-top: .5rem;
+    max-width: calc(90vw - 1rem) ;
+  }
+  .popoutBox {
+    grid-template-columns: calc(5vw + .5rem)  auto calc(5vw + .5rem) ;
   }
 }

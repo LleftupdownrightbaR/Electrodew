@@ -1,4 +1,4 @@
-a {
+a, .textBtn {
   color: var(--aFontColor);
   text-decoration: none;
 }
@@ -26,16 +26,22 @@ details[open]>summary>p+.symbolChevR {
 #symbolPhotoOnRectangle {
   -webkit-mask: url(../images/symbols/symbolPhotoOnRectangle.svg);
 }
+#symbolCircleInfo {
+  -webkit-mask: url(../images/symbols/symbolCircleInfo.svg);
+}
+#symbolCircleEllipsis {
+  -webkit-mask: url(../images/symbols/symbolCircleEllipsis.svg);
+}
 .subText, .subTextNM {
   color: var(--subFontColor);
 }
 .inTextSymbol {
   background-color: var(--fontColor);
 }
-a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2 {
+a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2, .textBtn, .quitAreaBtn {
   transition: .15s ease-in-out;
 }
-#naviBar, #container, .Lǎnchē, #naviA {
+#naviBar, #container, .Lǎnchē, #naviA, .popoutBox, .popoutBoxIn {
   transition: .35s ease-in-out;
 }
 .Lǎnchē, #b1, .theMSG {
@@ -70,7 +76,7 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2 {
 .theMSGIn {
   background-color: var(--contentColor);
 }
-.theMSGT {
+.theMSGT, .textBtn {
   font-weight: bold;
 }
 #msg01 {
@@ -95,11 +101,11 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2 {
   background-clip: text;
   color: transparent;
 }
-#naviA:after, #naviBar:after {
+#naviA:after, #naviBar:after, .popoutBoxIn, #popoutBoxFixed {
   background-color: var(--lightColorLite);
   -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
 }
-a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.VSpacer+#A1a, #symbolPhotoOnRectangle:hover+.VSpacer+#A3a, #b2:hover {
+a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.VSpacer+#A1a, #symbolPhotoOnRectangle:hover+.VSpacer+#A3a, #b2:hover, .textBtn:hover {
   transition: .05s ease-in-out;
   opacity: .3;
 }
@@ -132,6 +138,28 @@ a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:h
 }
 .DroidBtn:active {
   /*background-color: red;*/
+}
+.quitAreaBtn {
+  background-color: var(--makeDarkColor);
+}
+.popoutBoxIn {
+  box-shadow: 0px 0px 4rem var(--makeDarkColor);
+  border-radius: .75rem;
+}
+#popoutBoxFixed {
+  border-bottom: .01px solid var(--highlightColor);
+  border-radius: .75rem .75rem 0 0;
+}
+#popoutContent {
+  background-color: var(--contentColor);
+  border-radius: .75rem;
+}
+#infoCheckBox:checked+#infoBtn+#infoPopout>.VSpacer+.quitAreaBtn {
+  display: none;
+  opacity: 0;
+}
+#infoCheckBox:checked+#infoBtn+#infoPopout {
+  margin-top: 100vh;
 }
 @media (prefers-color-scheme: dark) {
   :root {
