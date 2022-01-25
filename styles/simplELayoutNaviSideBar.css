@@ -1,9 +1,9 @@
 /*Must be placed after "simplELayout.css".*/
 #symbolSideBarLeft {
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
-  margin-top: 0.75rem;
+  /*margin-top: 0.75rem;*/
 }
-#labelNaviSideBar, #naviSideBarFixed, .contentWindow {
+#labelNaviSideBar, #naviSideBarFixed, #naviSideBarontent {
   position: fixed;
 }
 #labelNaviSideBar {
@@ -28,7 +28,7 @@
   height: 100vh;  max-height: 100vh;
 }
 #naviSideBarFixed {
-  grid-template-columns: auto 3rem 3rem;
+  grid-template-columns: auto 1.5rem 1.5rem 1rem;
   grid-template-rows: 3rem;
   z-index: 3;
   height: 3rem;
