@@ -8,7 +8,6 @@
 }
 #labelNaviSideBar {
   grid-template-rows: 0.375rem 1.5rem auto;
-  grid-column-gap: 1rem;
   line-height: 3rem;
   transform: translateX(1rem);
   transition: .15s ease-in-out;
@@ -31,6 +30,7 @@
 #naviSideBarFixed {
   grid-template-columns: auto 1.5rem 1.5rem 1rem;
   grid-template-rows: 3rem;
+  grid-column-gap: 1rem;
   z-index: 3;
   height: 3rem;
 }
