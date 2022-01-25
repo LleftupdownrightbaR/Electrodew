@@ -251,7 +251,7 @@ img {
 }
 .popoutBoxIn {
   margin-top: 2.9296875vh;
-  width: 76.57393851vw;  height: 88.28125vh;
+  width: 76.57393851vw;  height: 91.2109375vh;
   max-width: 76.57393851vw;
 }
 #popoutBoxFixed {
@@ -266,7 +266,7 @@ img {
   width: 16rem;  height: calc(100vh - 3rem) ;
 }
 #popoutContent {
-  width: 76.57393851vw;  height: 88.28125vh;
+  width: 76.57393851vw;  height: 91.2109375vh;
 }
 .popoutTitle, .textBtn {
   text-align: center;
