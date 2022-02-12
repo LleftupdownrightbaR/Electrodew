@@ -18,11 +18,11 @@
 <vectornator:setting key="WDUnits" value="Pixels"/>
 </metadata>
 <defs>
-<radialGradient cx="512" cy="512" gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="RadialGradient" r="506.909">
+<radialGradient cx="512" cy="512" gradientTransform="matrix(-1 1.22465e-16 -1.22465e-16 -1 1024 1024)" gradientUnits="userSpaceOnUse" id="RadialGradient" r="506.909">
 <stop offset="0" stop-color="#000000" stop-opacity="0"/>
 <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
 </radialGradient>
-<linearGradient gradientTransform="matrix(0.721719 0.721719 -0.721719 0.721719 512 -227.04)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="174.969" x2="869.031" y1="154.969" y2="849.031">
+<linearGradient gradientTransform="matrix(-0.721719 -0.721719 0.721719 -0.721719 512 1251.04)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="174.969" x2="869.031" y1="154.969" y2="849.031">
 <stop offset="0" stop-color="#000000" stop-opacity="0.225"/>
 <stop offset="0.00413223" stop-color="#000000" stop-opacity="0.4"/>
 <stop offset="0.497934" stop-color="#000000" stop-opacity="0.6"/>
@@ -30,14 +30,14 @@
 <stop offset="0.995868" stop-color="#000000" stop-opacity="0.6"/>
 <stop offset="1" stop-color="#000000" stop-opacity="0.775"/>
 </linearGradient>
-<linearGradient gradientTransform="matrix(0.721719 0.721719 -0.721719 0.721719 512 -227.04)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="174.969" x2="874.031" y1="149.969" y2="849.031">
+<linearGradient gradientTransform="matrix(-0.721719 -0.721719 0.721719 -0.721719 512 1251.04)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="174.969" x2="874.031" y1="149.969" y2="849.031">
 <stop offset="0" stop-color="#000000" stop-opacity="0.45"/>
 <stop offset="1" stop-color="#000000"/>
 </linearGradient>
 </defs>
 <g id="圖層1" vectornator:layerName="圖層1">
-<path d="M526.434 11.0696L1012.93 497.566C1020.9 505.538 1020.9 518.462 1012.93 526.434L526.434 1012.93C518.462 1020.9 505.538 1020.9 497.566 1012.93L11.0696 526.434C3.09771 518.462 3.09771 505.538 11.0696 497.566L497.566 11.0696C505.538 3.09771 518.462 3.09771 526.434 11.0696Z" fill="url(#RadialGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
-<path d="M530.043 7.47363C520.078-2.4912 503.922-2.49122 493.957 7.47363L7.47363 493.957C-2.4912 503.922-2.49122 520.078 7.47363 530.043L493.957 1016.53C503.922 1026.49 520.078 1026.49 530.043 1016.53L1016.53 530.043C1026.49 520.078 1026.49 503.922 1016.53 493.957L530.043 7.47363ZM526.434 11.0822L1012.92 497.566C1020.89 505.538 1020.89 518.462 1012.92 526.434L526.434 1012.92C518.462 1020.89 505.538 1020.89 497.566 1012.92L11.0822 526.434C3.11034 518.462 3.11028 505.538 11.0822 497.566L497.566 11.0822C505.538 3.11034 518.462 3.11034 526.434 11.0822Z" fill="url(#LinearGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
-<path d="M526.434 11.0696L1012.93 497.566C1020.9 505.538 1020.9 518.462 1012.93 526.434L526.434 1012.93C518.462 1020.9 505.538 1020.9 497.566 1012.93L11.0696 526.434C3.09771 518.462 3.09771 505.538 11.0696 497.566L497.566 11.0696C505.538 3.09771 518.462 3.09771 526.434 11.0696Z" fill="url(#LinearGradient_2)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M497.566 1012.93L11.0696 526.434C3.09774 518.462 3.09774 505.538 11.0696 497.566L497.566 11.0696C505.538 3.09773 518.462 3.09773 526.434 11.0696L1012.93 497.566C1020.9 505.538 1020.9 518.462 1012.93 526.434L526.434 1012.93C518.462 1020.9 505.538 1020.9 497.566 1012.93Z" fill="url(#RadialGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M493.957 1016.53C503.922 1026.49 520.078 1026.49 530.043 1016.53L1016.53 530.043C1026.49 520.078 1026.49 503.922 1016.53 493.957L530.043 7.47365C520.078-2.49124 503.922-2.4912 493.957 7.47365L7.47366 493.957C-2.49124 503.922-2.4912 520.078 7.47366 530.043L493.957 1016.53ZM497.566 1012.92L11.0822 526.434C3.11037 518.462 3.11037 505.538 11.0822 497.566L497.566 11.0822C505.538 3.11036 518.462 3.1103 526.434 11.0822L1012.92 497.566C1020.89 505.538 1020.89 518.462 1012.92 526.434L526.434 1012.92C518.462 1020.89 505.538 1020.89 497.566 1012.92Z" fill="url(#LinearGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M497.566 1012.93L11.0696 526.434C3.09774 518.462 3.09774 505.538 11.0696 497.566L497.566 11.0696C505.538 3.09773 518.462 3.09773 526.434 11.0696L1012.93 497.566C1020.9 505.538 1020.9 518.462 1012.93 526.434L526.434 1012.93C518.462 1020.9 505.538 1020.9 497.566 1012.93Z" fill="url(#LinearGradient_2)" fill-rule="evenodd" opacity="1" stroke="none"/>
 </g>
 </svg>
