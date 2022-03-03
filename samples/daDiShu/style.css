@@ -1,0 +1,34 @@
+body {
+  background-color: rgba(235, 245, 255, 1);
+}
+h1, #test {
+  background: linear-gradient(to top, rgb(0, 0, 150), rgb(150, 200, 200));
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  /*filter: drop-shadow(rgba(0, 0, 0, .5) 0 0 3px);*/
+}
+.gridEle {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-column-gap: 0;
+}
+#boxWrapper {
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1px;
+  width: 42vmin;  height: 42vmin;
+}
+.box {
+  background-color: rgba(235, 245, 255, .6);
+  border: 1px solid rgba(220, 230, 240, .6);
+  border-radius: 100%;
+  filter: drop-shadow(rgba(0, 0, 0, .2) 5vmin 5vmin 10px) contrast(100%);
+  -webkit-backdrop-filter: blur(20px);
+  transition: .3s ease-in-out;
+  margin-right: -2vmin;
+  margin-bottom: -2vmin;
+}
+.box:hover {
+  background-color: rgba(230, 240, 250, .6);
+}
