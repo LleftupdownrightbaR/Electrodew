@@ -38,10 +38,10 @@ details[open]>summary>p+.symbolChevR {
 .inTextSymbol {
   background-color: var(--fontColor);
 }
-a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2, .textBtn, .quitAreaBtn {
+a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2, .textBtn {
   transition: .15s ease-in-out;
 }
-#naviBar, #container, .Lǎnchē, #naviA, .popoutBox, .popoutBoxIn {
+#naviBar, #container, .Lǎnchē, #naviA {
   transition: .35s ease-in-out;
 }
 .Lǎnchē, #b1, .theMSG {
@@ -65,7 +65,7 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2, .textBtn, .quitAreaBt
   border-radius: .75rem;
 }
 #searchBoxIn {
-  opacity: .9;
+  filter: opacity(90%);
 }
 .theMSG {
   border: unset;
@@ -101,13 +101,13 @@ a, #A1>#symbolHome, #A3>#symbolPhotoOnRectangle, #b1, #b2, .textBtn, .quitAreaBt
   background-clip: text;
   color: transparent;
 }
-#naviA:after, #naviBar:after, .popoutBoxIn, #popoutBoxFixed {
+#naviA:after, #naviBar:after {
   background-color: var(--lightColorLite);
   -webkit-backdrop-filter: blur(1.6rem) contrast(1.01);
 }
 a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:hover+.VSpacer+#A1a, #symbolPhotoOnRectangle:hover+.VSpacer+#A3a, #b2:hover, .textBtn:hover {
   transition: .05s ease-in-out;
-  opacity: .3;
+  filter: opacity(30%);
 }
 #b1:hover {
   background-color: var(--highlightColor);
@@ -122,44 +122,22 @@ a:hover, #A1:hover>#symbolHome, #A3:hover>#symbolPhotoOnRectangle, #symbolHome:h
 .DroidBtnUIn {
   background-color: var(--highlightColor);
   border-radius: 100%;
-  opacity: 0;
+  filter: opacity(0%);
 }
 .DroidBtn:hover {
   background-color: var(--highlightColor);
   border: .01px solid var(--makeDarkColor);
   transition: .1s ease-in-out;
-  opacity: 1;
+  filter: opacity(100%);
   padding: calc(.5rem - .01px) ;
 }
 .DroidBtnUIn:active {
   transition: 1s ease-in-out;
   transform: scale(50);
-  opacity: 1;
+  filter: opacity(100%);
 }
 .DroidBtn:active {
   /*background-color: red;*/
-}
-.quitAreaBtn {
-  background-color: var(--makeDarkColor);
-}
-.popoutBoxIn {
-  box-shadow: 0px 0px 4rem var(--makeDarkColor);
-  border-radius: .75rem;
-}
-#popoutBoxFixed {
-  border-bottom: .01px solid var(--highlightColor);
-  border-radius: .75rem .75rem 0 0;
-}
-#popoutContent {
-  background-color: var(--contentColor);
-  border-radius: .75rem;
-}
-#infoCheckBox:checked+#infoBtn+#infoPopout>.VSpacer+.quitAreaBtn {
-  display: none;
-  opacity: 0;
-}
-#infoCheckBox:checked+#infoBtn+#infoPopout {
-  margin-top: 100vh;
 }
 @media (prefers-color-scheme: dark) {
   :root {

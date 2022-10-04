@@ -3,7 +3,7 @@
   -webkit-mask: url(../images/symbols/symbolSideBarLeft.svg);
   /*margin-top: 0.75rem;*/
 }
-#labelNaviSideBar, #naviSideBarFixed, #naviSideBarontent {
+#labelNaviSideBar, #naviSideBarFixed, #naviSideBarContent {
   position: fixed;
 }
 #labelNaviSideBar {
@@ -44,7 +44,7 @@
 }
 #labelNaviSideBar:hover {
   transition: .05s ease-in-out;
-  opacity: .3;
+  filter: opacity(30%);
 }
 #naviSideBarCheckBox:checked<body {
   /*grid-template-columns: auto;*/
@@ -59,7 +59,7 @@
 }
 #naviSideBarCheckBox:checked+#labelNaviSideBar+#naviSideBar>#naviSideBarIn {
   transform: translateX(-8rem);
-  opacity: 0;
+  filter: opacity(0%);
 }
 @media screen and (orientation: portrait) {
   #naviSideBarCheckBox:checked<body {
@@ -97,13 +97,3 @@
     width: calc(100% + 16rem) ;
   }
 }
-/*@media screen and (orientation: portrait) and (max-device-width: 768px) {
-  #naviSideBarIn {
-    height: 32rem;
-  }
-}
-@media screen and (orientation: landscape) and (max-device-width: 480px) {
-  #naviSideBarIn {
-    height: 16rem;
-  }
-}*/
